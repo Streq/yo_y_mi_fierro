@@ -1,6 +1,8 @@
 ## Recontra
 Run and gun short platformer with an achievement system
 
+Uploaded to itch [here](https://streq.itch.io/recontra)
+
 ## Credits
 
 ### Music:  

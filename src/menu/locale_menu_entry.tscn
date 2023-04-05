@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/theme/default.tres" type="Theme" id=1]
+[ext_resource path="res://src/menu/locale_menu_entry.gd" type="Script" id=2]
+
+[node name="menu_entry" type="CenterContainer"]
+margin_right = 124.0
+margin_bottom = 8.0
+focus_mode = 2
+script = ExtResource( 2 )
+
+[node name="menu_entry" type="HBoxContainer" parent="."]
+margin_left = 26.0
+margin_right = 98.0
+margin_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/separation = 0
+alignment = 1
+
+[node name="left_arrow" type="Label" parent="menu_entry"]
+unique_name_in_owner = true
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 8.0
+margin_bottom = 8.0
+theme = ExtResource( 1 )
+text = ">"
+
+[node name="label" type="Label" parent="menu_entry"]
+unique_name_in_owner = true
+margin_left = 8.0
+margin_right = 64.0
+margin_bottom = 8.0
+theme = ExtResource( 1 )
+text = "entry"
+align = 1
+valign = 1
+
+[node name="right_arrow" type="Label" parent="menu_entry"]
+unique_name_in_owner = true
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 64.0
+margin_right = 72.0
+margin_bottom = 8.0
+theme = ExtResource( 1 )
+text = "<"

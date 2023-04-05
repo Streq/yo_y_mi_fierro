@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=1]
+[ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/bullet/bullet.gd" type="Script" id=3]
+[ext_resource path="res://src/bullet/fix_rotation.gd" type="Script" id=4]
+[ext_resource path="res://assets/texture/dung_ball.png" type="Texture" id=5]
+
+[sub_resource type="CircleShape2D" id=427]
+radius = 3.0
+
+[sub_resource type="Image" id=485]
+data = {
+"data": PoolByteArray( 240, 188, 60, 255, 71, 58, 0, 255, 41, 28, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=484]
+flags = 0
+flags = 0
+image = SubResource( 485 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=468]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 484 )
+
+[node name="bullet" type="Node2D" groups=["bullet"]]
+script = ExtResource( 3 )
+drag = 0.0
+movement_threshold_squared = 40000
+knockback = 0.1
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource( 427 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 468 )
+texture = ExtResource( 5 )
+
+[node name="palette_client" parent="Sprite" instance=ExtResource( 2 )]
+index = 5
+
+[node name="fix_rotation" type="Node" parent="Sprite"]
+script = ExtResource( 4 )
+
+[node name="lifespan" type="Timer" parent="."]
+process_mode = 0
+
+[connection signal="area_entered" from="hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="timeout" from="lifespan" to="." method="_on_lifespan_timeout"]

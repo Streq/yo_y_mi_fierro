@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/texture/life_dot.png" type="Texture" id=2]
+[ext_resource path="res://src/HUD/life_dot.gd" type="Script" id=3]
+[ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=4]
+
+[node name="life_dot" type="TextureRect"]
+margin_right = 8.0
+margin_bottom = 16.0
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="palette_client" parent="." instance=ExtResource( 4 )]
+type = 1
+index = 6

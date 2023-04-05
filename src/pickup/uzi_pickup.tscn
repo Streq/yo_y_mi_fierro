@@ -1,0 +1,64 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/shooter/uzi.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/pickup/pickup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/texture/pickup/uzi_pickup.png" type="Texture" id=3]
+[ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=4]
+
+[sub_resource type="Image" id=486]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=480]
+flags = 0
+flags = 0
+image = SubResource( 486 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=481]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 480 )
+
+[sub_resource type="Image" id=487]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 255, 255, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=484]
+flags = 0
+flags = 0
+image = SubResource( 487 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=485]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 484 )
+
+[node name="weapon_change_pickup3" instance=ExtResource( 2 )]
+
+[node name="Sprite" parent="." index="1"]
+material = SubResource( 481 )
+texture = ExtResource( 3 )
+
+[node name="Sprite" parent="Sprite" index="1"]
+material = SubResource( 485 )
+
+[node name="effect" parent="." index="2"]
+WEAPON = ExtResource( 1 )

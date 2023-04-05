@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/xDeviruchi - Prepare for Battle! .ogg-48f54fc274de9ba81f36bab4f844fd20.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/music/recontra_free/loss/xDeviruchi - Prepare for Battle! .ogg"
+dest_files=[ "res://.import/xDeviruchi - Prepare for Battle! .ogg-48f54fc274de9ba81f36bab4f844fd20.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

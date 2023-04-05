@@ -1,0 +1,108 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/util/global/Achievements/achievement.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/util/global/Achievements/Achievements.gd" type="Script" id=2]
+[ext_resource path="res://src/util/global/Achievements/storage.gd" type="Script" id=3]
+[ext_resource path="res://src/util/global/Achievements/newgrounds_notifier.gd" type="Script" id=4]
+[ext_resource path="res://assets/texture/achievements/no_hurt.png" type="Texture" id=5]
+[ext_resource path="res://assets/texture/achievements/star_gold.png" type="Texture" id=6]
+[ext_resource path="res://assets/texture/achievements/no_hurt_boss.png" type="Texture" id=7]
+[ext_resource path="res://assets/texture/achievements/star_war.png" type="Texture" id=8]
+[ext_resource path="res://assets/texture/achievements/beat_boss.png" type="Texture" id=9]
+[ext_resource path="res://assets/texture/achievements/star_silver.png" type="Texture" id=10]
+[ext_resource path="res://assets/texture/achievements/star_bronce.png" type="Texture" id=11]
+[ext_resource path="res://assets/texture/achievements/star_platinum.png" type="Texture" id=12]
+[ext_resource path="res://assets/texture/achievements/pacifist.png" type="Texture" id=13]
+[ext_resource path="res://assets/texture/achievements/all_quiet.png" type="Texture" id=14]
+[ext_resource path="res://assets/texture/achievements/beat_level.png" type="Texture" id=15]
+[ext_resource path="res://assets/texture/achievements/starting_gun.png" type="Texture" id=16]
+
+[node name="Achievements" type="Node"]
+script = ExtResource( 2 )
+
+[node name="list" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="beat_level" parent="list" instance=ExtResource( 1 )]
+title = "Workday Over"
+description = "Beat the war level"
+texture = ExtResource( 15 )
+
+[node name="beat_boss" parent="list" instance=ExtResource( 1 )]
+title = "No Honey don't call the Exterminator"
+description = "Beat the final boss"
+texture = ExtResource( 9 )
+
+[node name="kill30" parent="list" instance=ExtResource( 1 )]
+title = "Good Shot, Good Soldier"
+description = "Kill 30 enemies"
+texture = ExtResource( 11 )
+
+[node name="kill45" parent="list" instance=ExtResource( 1 )]
+title = "No Way"
+description = "Kill 45 enemies"
+texture = ExtResource( 10 )
+
+[node name="kill60" parent="list" instance=ExtResource( 1 )]
+title = "Going Rambo in this mf"
+description = "Kill 60 enemies"
+texture = ExtResource( 6 )
+
+[node name="kill70" parent="list" instance=ExtResource( 1 )]
+title = "God of the Battlefield"
+description = "Kill 70 enemies"
+texture = ExtResource( 12 )
+
+[node name="kill80" parent="list" instance=ExtResource( 1 )]
+title = "Actually Impossible"
+description = "Kill all enemies"
+texture = ExtResource( 8 )
+
+[node name="starting_gun" parent="list" instance=ExtResource( 1 )]
+title = "Fear of Pickups"
+description = "End the war level with the starting gun and at least 20 kills"
+texture = ExtResource( 16 )
+
+[node name="no_hurt" parent="list" instance=ExtResource( 1 )]
+title = "Doctors Hate Him"
+description = "Beat the war level without getting hurt"
+texture = ExtResource( 5 )
+
+[node name="pacifist" parent="list" instance=ExtResource( 1 )]
+title = "How Do I Shoot"
+description = "Beat the war level without shooting your gun"
+texture = ExtResource( 13 )
+
+[node name="no_hurt_boss" parent="list" instance=ExtResource( 1 )]
+title = "Shoulda Blocked Another Bathroom Dumbass"
+description = "Beat the final boss without getting hurt"
+texture = ExtResource( 7 )
+
+[node name="kill_all_enemies_coming_from_right" parent="list" instance=ExtResource( 1 )]
+title = "All Quiet on the Western Front"
+description = "Kill all enemies coming from the right"
+texture = ExtResource( 14 )
+
+[node name="storage" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="newgrounds_notifier" type="Node" parent="."]
+script = ExtResource( 4 )
+id_map = {
+"beat_boss": 73362,
+"beat_level": 73361,
+"kill30": 73363,
+"kill45": 73364,
+"kill60": 73365,
+"kill70": 73366,
+"kill80": 73367,
+"kill_all_enemies_coming_from_right": 73371,
+"no_hurt": 73368,
+"no_hurt_boss": 73370,
+"pacifist": 73369,
+"starting_gun": 73372
+}
+
+[connection signal="changed" from="." to="storage" method="save_to_file"]
+[connection signal="complete" from="." to="newgrounds_notifier" method="completed"]
+[connection signal="ready" from="." to="storage" method="load_from_file"]

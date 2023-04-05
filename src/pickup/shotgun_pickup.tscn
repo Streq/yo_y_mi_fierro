@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/pickup/pickup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/shooter/shotgun.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/texture/pickup/shotgun_pickup.png" type="Texture" id=4]
+
+[node name="weapon_change_pickup" instance=ExtResource( 2 )]
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 4 )
+
+[node name="effect" parent="." index="2"]
+WEAPON = ExtResource( 3 )

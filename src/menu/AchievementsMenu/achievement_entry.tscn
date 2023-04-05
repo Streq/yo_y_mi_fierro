@@ -1,0 +1,44 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/texture/achievements/beat_level.png" type="Texture" id=1]
+[ext_resource path="res://src/menu/AchievementsMenu/achievement_entry.gd" type="Script" id=2]
+[ext_resource path="res://assets/texture/achievements/selected_panel.png" type="Texture" id=3]
+[ext_resource path="res://assets/texture/achievements/locked.png" type="Texture" id=4]
+[ext_resource path="res://assets/texture/achievements/panel.png" type="Texture" id=5]
+
+[node name="achievement_entry" type="TextureRect"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 24, 24 )
+focus_mode = 2
+texture = ExtResource( 1 )
+stretch_mode = 4
+script = ExtResource( 2 )
+
+[node name="panel" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -9.0
+margin_top = -9.0
+margin_right = 9.0
+margin_bottom = 9.0
+rect_min_size = Vector2( 16, 16 )
+texture = ExtResource( 5 )
+
+[node name="locked" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 16, 16 )
+texture = ExtResource( 4 )
+stretch_mode = 4
+
+[node name="focus_panel" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 1, 0.835294, 0.521569, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 16, 16 )
+texture = ExtResource( 3 )
+stretch_mode = 4

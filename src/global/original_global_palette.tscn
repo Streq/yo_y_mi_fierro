@@ -1,0 +1,541 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=1]
+[ext_resource path="res://src/util/color/palette.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/util/color/GlobalPalette.gd" type="Script" id=3]
+[ext_resource path="res://assets/texture/recontra_tiles.png" type="Texture" id=4]
+[ext_resource path="res://src/util/color/local_palette_client.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Image" id=173]
+data = {
+"data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=142]
+flags = 0
+flags = 0
+image = SubResource( 173 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=24]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 142 )
+
+[sub_resource type="Image" id=174]
+data = {
+"data": PoolByteArray( 246, 231, 213, 255, 255, 156, 198, 255, 247, 82, 49, 255, 57, 57, 57, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=144]
+flags = 0
+flags = 0
+image = SubResource( 174 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=27]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 144 )
+
+[sub_resource type="Image" id=175]
+data = {
+"data": PoolByteArray( 128, 208, 16, 255, 0, 148, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=146]
+flags = 0
+flags = 0
+image = SubResource( 175 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=30]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0.0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 146 )
+
+[sub_resource type="Image" id=176]
+data = {
+"data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=148]
+flags = 0
+flags = 0
+image = SubResource( 176 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=33]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 148 )
+
+[sub_resource type="Image" id=177]
+data = {
+"data": PoolByteArray( 246, 231, 213, 255, 255, 255, 57, 255, 255, 132, 8, 255, 57, 57, 57, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=150]
+flags = 0
+flags = 0
+image = SubResource( 177 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=36]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 150 )
+
+[sub_resource type="Image" id=178]
+data = {
+"data": PoolByteArray( 240, 188, 60, 255, 136, 112, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=152]
+flags = 0
+flags = 0
+image = SubResource( 178 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=39]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 152 )
+
+[sub_resource type="Image" id=179]
+data = {
+"data": PoolByteArray( 252, 252, 252, 255, 188, 188, 188, 255, 60, 188, 252, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=154]
+flags = 0
+flags = 0
+image = SubResource( 179 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=42]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 154 )
+
+[sub_resource type="Image" id=180]
+data = {
+"data": PoolByteArray( 254, 254, 133, 255, 254, 254, 133, 255, 115, 74, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=156]
+flags = 0
+flags = 0
+image = SubResource( 180 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=80]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 156 )
+
+[sub_resource type="Image" id=181]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=158]
+flags = 0
+flags = 0
+image = SubResource( 181 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 158 )
+
+[sub_resource type="Image" id=182]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=160]
+flags = 0
+flags = 0
+image = SubResource( 182 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=6]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 160 )
+
+[sub_resource type="Image" id=183]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 57, 189, 24, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=162]
+flags = 0
+flags = 0
+image = SubResource( 183 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=9]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 162 )
+
+[sub_resource type="Image" id=184]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 123, 82, 24, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=164]
+flags = 0
+flags = 0
+image = SubResource( 184 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=12]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 164 )
+
+[sub_resource type="Image" id=185]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 155, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=166]
+flags = 0
+flags = 0
+image = SubResource( 185 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=15]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 166 )
+
+[sub_resource type="Image" id=186]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 222, 255, 222, 255, 107, 107, 107, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=168]
+flags = 0
+flags = 0
+image = SubResource( 186 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=88]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 168 )
+
+[sub_resource type="Image" id=187]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 99, 206, 8, 255, 41, 115, 0, 255, 57, 57, 57, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=170]
+flags = 0
+flags = 0
+image = SubResource( 187 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=18]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 170 )
+
+[sub_resource type="Image" id=188]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 255, 255, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=172]
+flags = 0
+flags = 0
+image = SubResource( 188 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=21]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 172 )
+
+[sub_resource type="TileSet" id=140]
+0/name = "contra_tiles.png 0"
+0/texture = ExtResource( 4 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 192, 144 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 16 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+
+[node name="GlobalPalette" type="Node"]
+script = ExtResource( 3 )
+
+[node name="Background" type="Node" parent="."]
+
+[node name="grey" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.964706, 0.905882, 0.835294, 1, 0.611765, 0.611765, 0.611765, 1, 0.419608, 0.419608, 0.419608, 1, 0.223529, 0.223529, 0.223529, 1 )
+material = SubResource( 24 )
+string_val = "[\"fff6e7d5\",\"ff9c9c9c\",\"ff6b6b6b\",\"ff393939\"]"
+
+[node name="pink" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.964706, 0.905882, 0.835294, 1, 1, 0.611765, 0.776471, 1, 0.968627, 0.321569, 0.192157, 1, 0.223529, 0.223529, 0.223529, 1 )
+material = SubResource( 27 )
+string_val = "[\"fff6e7d5\",\"ffff9cc6\",\"fff75231\",\"ff393939\"]"
+
+[node name="green" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.501961, 0.815686, 0.0627451, 1, 0, 0.580392, 0, 1, 0.25098, 0.172549, 0, 1, 0, 0, 0, 1 )
+material = SubResource( 30 )
+string_val = "[\"ff80d010\",\"ff009400\",\"ff402c00\",\"ff000000\"]"
+
+[node name="blue" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.988235, 0.988235, 0.988235, 1, 0.235294, 0.737255, 0.988235, 1, 0, 0.439216, 0.92549, 1, 0, 0, 0, 1 )
+material = SubResource( 33 )
+string_val = "[\"fffcfcfc\",\"ff3cbcfc\",\"ff0070ec\",\"ff000000\"]"
+
+[node name="yellow" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.964706, 0.905882, 0.835294, 1, 1, 1, 0.223529, 1, 1, 0.517647, 0.0313726, 1, 0.223529, 0.223529, 0.223529, 1 )
+material = SubResource( 36 )
+string_val = "[\"fff6e7d5\",\"ffffff39\",\"ffff8408\",\"ff393939\"]"
+
+[node name="light_brown" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.941176, 0.737255, 0.235294, 1, 0.533333, 0.439216, 0, 1, 0.25098, 0.172549, 0, 1, 0, 0, 0, 1 )
+material = SubResource( 39 )
+string_val = "[\"fff0bc3c\",\"ff887000\",\"ff402c00\",\"ff000000\"]"
+
+[node name="light_blue" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.988235, 0.988235, 0.988235, 1, 0.737255, 0.737255, 0.737255, 1, 0.235294, 0.737255, 0.988235, 1, 0, 0, 0, 1 )
+material = SubResource( 42 )
+string_val = "[\"fffcfcfc\",\"ffbcbcbc\",\"ff3cbcfc\",\"ff000000\"]"
+
+[node name="sign_text" parent="Background" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.996078, 0.996078, 0.521569, 1, 0.996078, 0.996078, 0.521569, 1, 0.45098, 0.290196, 0, 1, 0, 0, 0, 1 )
+material = SubResource( 80 )
+string_val = "[\"fffefe85\",\"fffefe85\",\"ff734a00\",\"ff000000\"]"
+
+[node name="Object" type="Node" parent="."]
+
+[node name="red_dude" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 1, 0.890196, 0.388235, 1, 1, 0.223529, 0.0313726, 1, 0, 0, 0, 1 )
+material = SubResource( 3 )
+string_val = "[\"ffdeffde\",\"ffffe363\",\"ffff3908\",\"ff000000\"]"
+is_object = true
+
+[node name="blue_dude" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 1, 0.890196, 0.388235, 1, 0.305882, 0.290196, 1, 1, 0, 0, 0, 1 )
+material = SubResource( 6 )
+string_val = "[\"ffdeffde\",\"ffffe363\",\"ff4e4aff\",\"ff000000\"]"
+is_object = true
+
+[node name="green_dude" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 1, 0.890196, 0.388235, 1, 0.223529, 0.741176, 0.0941176, 1, 0, 0, 0, 1 )
+material = SubResource( 9 )
+string_val = "[\"ffdeffde\",\"ffffe363\",\"ff39bd18\",\"ff000000\"]"
+is_object = true
+
+[node name="brown_dude" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 1, 0.890196, 0.388235, 1, 0.482353, 0.321569, 0.0941176, 1, 0, 0, 0, 1 )
+material = SubResource( 12 )
+string_val = "[\"ffdeffde\",\"ffffe363\",\"ff7b5218\",\"ff000000\"]"
+is_object = true
+
+[node name="hurt" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 0.607843, 0, 1 )
+material = SubResource( 15 )
+string_val = "[\"ffdeffde\",\"ff000000\",\"ffff0000\",\"ffff9b00\"]"
+is_object = true
+
+[node name="grey" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.870588, 1, 0.870588, 1, 0.870588, 1, 0.870588, 1, 0.419608, 0.419608, 0.419608, 1, 0, 0, 0, 1 )
+material = SubResource( 88 )
+string_val = "[\"ffdeffde\",\"ffdeffde\",\"ff6b6b6b\",\"ff000000\"]"
+is_object = true
+
+[node name="grass" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 0.709804, 1, 0.321569, 1, 0.388235, 0.807843, 0.0313726, 1, 0.160784, 0.45098, 0, 1, 0.223529, 0.223529, 0.223529, 1 )
+material = SubResource( 18 )
+string_val = "[\"ffb5ff52\",\"ff63ce08\",\"ff297300\",\"ff393939\"]"
+is_object = true
+
+[node name="bullet" parent="Object" instance=ExtResource( 2 )]
+palette = PoolColorArray( 1, 1, 1, 1, 1, 0, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1 )
+material = SubResource( 21 )
+string_val = "[\"ffffffff\",\"ffff0000\",\"ffffff00\",\"ffffffff\"]"
+is_object = true
+
+[node name="grass" type="TileMap" parent="."]
+visible = false
+material = SubResource( 30 )
+tile_set = SubResource( 140 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 196608, 0, 196608, 196609, 0, 196609, 196610, 0, 196609, 196611, 0, 196609, 196612, 0, 196609, 196613, 0, 196609, 196614, 0, 196610, 196623, 0, 196608, 196624, 0, 196609, 196625, 0, 196609, 196626, 0, 196609, 196627, 0, 196610, 262144, 0, 262144, 262145, 0, 262145, 262146, 0, 262146, 262147, 0, 262145, 262148, 0, 262145, 262149, 0, 262145, 262150, 0, 262145, 262159, 0, 262146, 262160, 0, 262145, 262161, 0, 262144, 262162, 0, 262145, 262163, 0, 262146, 327680, 0, 327680, 327681, 0, 327680, 327682, 0, 327680, 327683, 0, 327680, 327684, 0, 327680, 327685, 0, 327680, 327686, 0, 327680, 327687, 0, 327680, 327688, 0, 327680, 327689, 0, 327680, 327690, 0, 327680, 327691, 0, 327680, 327692, 0, 327680, 327693, 0, 327680, 327694, 0, 327680, 327695, 0, 327680, 327696, 0, 327680, 327697, 0, 327680, 327698, 0, 327680, 327699, 0, 327680, 589824, 0, 327680, 589825, 0, 327680, 589826, 0, 327680, 589827, 0, 327680, 589828, 0, 327680, 589829, 0, 327680, 589830, 0, 327680, 589831, 0, 327680, 589832, 0, 327680, 589833, 0, 327680, 589834, 0, 327680, 589835, 0, 327680, 589836, 0, 327680, 589837, 0, 327680, 589838, 0, 327680, 589839, 0, 327680, 589840, 0, 327680, 589841, 0, 327680, 589842, 0, 327680, 589843, 0, 327680, 851968, 0, 327680, 851969, 0, 327680, 851970, 0, 327680, 851971, 0, 327680, 851972, 0, 327680, 851973, 0, 327680, 851974, 0, 327680, 851975, 0, 327680, 851976, 0, 327680, 851977, 0, 327680, 851978, 0, 327680, 851979, 0, 327680, 851980, 0, 327680, 851981, 0, 327680, 851982, 0, 327680, 851983, 0, 327680, 851984, 0, 327680, 851985, 0, 327680, 851986, 0, 327680, 851987, 0, 327680, 1114112, 0, 327680, 1114113, 0, 327680, 1114114, 0, 327680, 1114115, 0, 327680, 1114116, 0, 327680, 1114117, 0, 327680, 1114118, 0, 327680, 1114119, 0, 327680, 1114120, 0, 327680, 1114121, 0, 327680, 1114122, 0, 327680, 1114123, 0, 327680, 1114124, 0, 327680, 1114125, 0, 327680, 1114126, 0, 327680, 1114127, 0, 327680, 1114128, 0, 327680, 1114129, 0, 327680, 1114130, 0, 327680, 1114131, 0, 327680, 1376256, 0, 327680, 1376257, 0, 327680, 1376258, 0, 327680, 1376259, 0, 327680, 1376260, 0, 327680, 1376261, 0, 327680, 1376262, 0, 327680, 1376263, 0, 327680, 1376264, 0, 327680, 1376265, 0, 327680, 1376266, 0, 327680, 1376267, 0, 327680, 1376268, 0, 327680, 1376269, 0, 327680, 1376270, 0, 327680, 1376271, 0, 327680, 1376272, 0, 327680, 1376273, 0, 327680, 1376274, 0, 327680, 1376275, 0, 327680 )
+
+[node name="palette_client" parent="grass" instance=ExtResource( 5 )]
+palette_path = NodePath("../..")
+index = 2
+
+[node name="rocks" type="TileMap" parent="."]
+visible = false
+material = SubResource( 39 )
+tile_set = SubResource( 140 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 393216, 0, 393216, 393217, 0, 393216, 393218, 0, 393216, 393219, 0, 393216, 393220, 0, 393216, 393221, 0, 393216, 393222, 0, 393216, 393223, 0, 393216, 393224, 0, 393216, 393225, 0, 393216, 393226, 0, 393216, 393227, 0, 393216, 393228, 0, 393216, 393229, 0, 393216, 393230, 0, 393216, 393231, 0, 393216, 393232, 0, 393216, 393233, 0, 393216, 393234, 0, 393216, 393235, 0, 393216, 458752, 0, 458752, 458753, 0, 458752, 458754, 0, 458752, 458755, 0, 458752, 458756, 0, 458752, 458757, 0, 458752, 458758, 0, 458752, 458759, 0, 458752, 458760, 0, 458752, 458761, 0, 458752, 458762, 0, 458752, 458763, 0, 458752, 458764, 0, 458752, 458765, 0, 458752, 458766, 0, 458752, 458767, 0, 458752, 458768, 0, 458752, 458769, 0, 458752, 458770, 0, 458752, 458771, 0, 458752, 524288, 0, 524288, 524289, 0, 524288, 524290, 0, 524288, 524291, 0, 524288, 524292, 0, 524288, 524293, 0, 524288, 524294, 0, 524288, 524295, 0, 524288, 524296, 0, 524288, 524297, 0, 524288, 524298, 0, 524288, 524299, 0, 524288, 524300, 0, 524288, 524301, 0, 524288, 524302, 0, 524288, 524303, 0, 524288, 524304, 0, 524288, 524305, 0, 524288, 524306, 0, 524288, 524307, 0, 524288, 655360, 0, 393216, 655361, 0, 393216, 655362, 0, 393216, 655363, 0, 393216, 655364, 0, 393216, 655365, 0, 393216, 655366, 0, 393216, 655367, 0, 393216, 655368, 0, 393216, 655369, 0, 393216, 655370, 0, 393216, 655371, 0, 393216, 655372, 0, 393216, 655373, 0, 393216, 655374, 0, 393216, 655375, 0, 393216, 655376, 0, 393216, 655377, 0, 393216, 655378, 0, 393216, 655379, 0, 393216, 720896, 0, 458752, 720897, 0, 458752, 720898, 0, 458752, 720899, 0, 458752, 720900, 0, 458752, 720901, 0, 458752, 720902, 0, 458752, 720903, 0, 458752, 720904, 0, 458752, 720905, 0, 458752, 720906, 0, 458752, 720907, 0, 458752, 720908, 0, 458752, 720909, 0, 458752, 720910, 0, 458752, 720911, 0, 458752, 720912, 0, 458752, 720913, 0, 458752, 720914, 0, 458752, 720915, 0, 458752, 786432, 0, 524288, 786433, 0, 524288, 786434, 0, 524288, 786435, 0, 524288, 786436, 0, 524288, 786437, 0, 524288, 786438, 0, 524288, 786439, 0, 524288, 786440, 0, 524288, 786441, 0, 524288, 786442, 0, 524288, 786443, 0, 524288, 786444, 0, 524288, 786445, 0, 524288, 786446, 0, 524288, 786447, 0, 524288, 786448, 0, 524288, 786449, 0, 524288, 786450, 0, 524288, 786451, 0, 524288, 917504, 0, 393216, 917505, 0, 393216, 917506, 0, 393216, 917507, 0, 393216, 917508, 0, 393216, 917509, 0, 393216, 917510, 0, 393216, 917511, 0, 393216, 917512, 0, 393216, 917513, 0, 393216, 917514, 0, 393216, 917515, 0, 393216, 917516, 0, 393216, 917517, 0, 393216, 917518, 0, 393216, 917519, 0, 393216, 917520, 0, 393216, 917521, 0, 393216, 917522, 0, 393216, 917523, 0, 393216, 983040, 0, 458752, 983041, 0, 458752, 983042, 0, 458752, 983043, 0, 458752, 983044, 0, 458752, 983045, 0, 458752, 983046, 0, 458752, 983047, 0, 458752, 983048, 0, 458752, 983049, 0, 458752, 983050, 0, 458752, 983051, 0, 458752, 983052, 0, 458752, 983053, 0, 458752, 983054, 0, 458752, 983055, 0, 458752, 983056, 0, 458752, 983057, 0, 458752, 983058, 0, 458752, 983059, 0, 458752, 1048576, 0, 524288, 1048577, 0, 524288, 1048578, 0, 524288, 1048579, 0, 524288, 1048580, 0, 524288, 1048581, 0, 524288, 1048582, 0, 524288, 1048583, 0, 524288, 1048584, 0, 524288, 1048585, 0, 524288, 1048586, 0, 524288, 1048587, 0, 524288, 1048588, 0, 524288, 1048589, 0, 524288, 1048590, 0, 524288, 1048591, 0, 524288, 1048592, 0, 524288, 1048593, 0, 524288, 1048594, 0, 524288, 1048595, 0, 524288, 1179648, 0, 393216, 1179649, 0, 393216, 1179650, 0, 393216, 1179651, 0, 393216, 1179652, 0, 393216, 1179653, 0, 393216, 1179654, 0, 393216, 1179655, 0, 393216, 1179656, 0, 393216, 1179657, 0, 393216, 1179658, 0, 393216, 1179659, 0, 393216, 1179660, 0, 393216, 1179661, 0, 393216, 1179662, 0, 393216, 1179663, 0, 393216, 1179664, 0, 393216, 1179665, 0, 393216, 1179666, 0, 393216, 1179667, 0, 393216, 1245184, 0, 458752, 1245185, 0, 458752, 1245186, 0, 458752, 1245187, 0, 458752, 1245188, 0, 458752, 1245189, 0, 458752, 1245190, 0, 458752, 1245191, 0, 458752, 1245192, 0, 458752, 1245193, 0, 458752, 1245194, 0, 458752, 1245195, 0, 458752, 1245196, 0, 458752, 1245197, 0, 458752, 1245198, 0, 458752, 1245199, 0, 458752, 1245200, 0, 458752, 1245201, 0, 458752, 1245202, 0, 458752, 1245203, 0, 458752, 1310720, 0, 524288, 1310721, 0, 524288, 1310722, 0, 524288, 1310723, 0, 524288, 1310724, 0, 524288, 1310725, 0, 524288, 1310726, 0, 524288, 1310727, 0, 524288, 1310728, 0, 524288, 1310729, 0, 524288, 1310730, 0, 524288, 1310731, 0, 524288, 1310732, 0, 524288, 1310733, 0, 524288, 1310734, 0, 524288, 1310735, 0, 524288, 1310736, 0, 524288, 1310737, 0, 524288, 1310738, 0, 524288, 1310739, 0, 524288 )
+
+[node name="palette_client" parent="rocks" instance=ExtResource( 5 )]
+palette_path = NodePath("../..")
+index = 5
+
+[node name="water" type="TileMap" parent="."]
+visible = false
+material = SubResource( 33 )
+tile_set = SubResource( 140 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 1441792, 0, 458755, 1441793, 0, 458755, 1441794, 0, 458755, 1441795, 0, 458755, 1441796, 0, 458755, 1441797, 0, 458755, 1441798, 0, 458755, 1441799, 0, 458755, 1441800, 0, 458755, 1441801, 0, 458755, 1441802, 0, 458755, 1441803, 0, 458755, 1441804, 0, 458755, 1441805, 0, 458755, 1441806, 0, 458755, 1441807, 0, 458755, 1441808, 0, 458755, 1441809, 0, 458755, 1441810, 0, 458755, 1441811, 0, 458755 )
+
+[node name="palette_client" parent="water" instance=ExtResource( 5 )]
+palette_path = NodePath("../..")
+index = 3
+
+[node name="sky" type="TileMap" parent="."]
+visible = false
+material = SubResource( 42 )
+tile_set = SubResource( 140 )
+cell_size = Vector2( 32, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 1, 1, 0, 2, 2, 0, 0, 3, 0, 3, 4, 0, 0, 5, 0, 3, 6, 0, 0, 7, 0, 3, 8, 0, 0, 9, 0, 3, 10, 0, 0, 11, 0, 3, 12, 0, 0, 13, 0, 3, 14, 0, 0, 15, 0, 3, 16, 0, 1, 17, 0, 4, 18, 0, 5, 19, 0, 2, 65536, 0, 65537, 65537, 0, 65538, 65538, 0, 3, 65539, 0, 0, 65540, 0, 3, 65541, 0, 0, 65542, 0, 3, 65543, 0, 0, 65544, 0, 3, 65545, 0, 0, 65546, 0, 3, 65547, 0, 0, 65548, 0, 3, 65549, 0, 0, 65550, 0, 3, 65551, 0, 0, 65552, 0, 65537, 65553, 0, 65540, 65554, 0, 65541, 65555, 0, 65538, 131072, 0, 131073, 131073, 0, 131074, 131074, 0, 131074, 131075, 0, 131074, 131076, 0, 131074, 131077, 0, 131074, 131078, 0, 131074, 131079, 0, 131074, 131080, 0, 131074, 131081, 0, 131074, 131082, 0, 131074, 131083, 0, 131074, 131084, 0, 131074, 131085, 0, 131074, 131086, 0, 131074, 131087, 0, 131074, 131088, 0, 131073, 131089, 0, 131076, 131090, 0, 131077, 131091, 0, 131074, 196615, 0, 131074, 196616, 0, 131074, 196617, 0, 131074, 196618, 0, 131074, 196619, 0, 131074, 196620, 0, 131074, 196621, 0, 131074, 196622, 0, 131074, 262151, 0, 131074, 262152, 0, 131074, 262153, 0, 131074, 262154, 0, 131074, 262155, 0, 131074, 262156, 0, 131074, 262157, 0, 131074, 262158, 0, 131074 )
+
+[node name="palette_client" parent="sky" instance=ExtResource( 5 )]
+palette_path = NodePath("../..")
+index = 6

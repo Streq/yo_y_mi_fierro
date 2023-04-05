@@ -1,0 +1,219 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=1]
+[ext_resource path="res://assets/texture/white_square.png" type="Texture" id=2]
+[ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/ending/orchestrator.gd" type="Script" id=4]
+[ext_resource path="res://assets/theme/default.tres" type="Theme" id=5]
+[ext_resource path="res://src/roach_sequence/credits.gd" type="Script" id=6]
+[ext_resource path="res://assets/audio/music/recontra_free/wife/joshua-mclean_celebrate.ogg" type="AudioStream" id=7]
+
+[sub_resource type="Image" id=482]
+data = {
+"data": PoolByteArray( 252, 252, 252, 255, 188, 188, 188, 255, 60, 188, 252, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=480]
+flags = 0
+flags = 0
+image = SubResource( 482 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=481]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 480 )
+
+[sub_resource type="Image" id=483]
+data = {
+"data": PoolByteArray( 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=2]
+flags = 0
+flags = 0
+image = SubResource( 483 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=3]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 2 )
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 640, 472 ) ]
+}
+
+[sub_resource type="Animation" id=11]
+resource_name = "play"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 60 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 360 ), Vector2( 0, -440 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 640, 472 ) ]
+}
+
+[node name="ending" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+material = SubResource( 481 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+
+[node name="palette_client" parent="CanvasLayer/TextureRect" instance=ExtResource( 3 )]
+index = 6
+
+[node name="credits" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+material = SubResource( 3 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 360.0
+margin_right = 640.0
+margin_bottom = 832.0
+theme = ExtResource( 5 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 0
+text = "Credits
+
+Programming:
+Streq (Godot Engine 3.x)
+
+Graphics:
+Streq (Aseprite)
+
+Sound Effects:
+Streq (sfxr)
+
+Writing:
+Streq (brain)
+
+Localization:
+Streq
+
+Play Testing:
+Nacho
+
+Music:
+8-Bit Mega Action Platformer Soundtrack by RyanAvx 
+https://ryanavx.itch.io/breezys-mega-quest
+Songs used:
+-Breezy's Mega Quest - 7 Stage Final Boss
+-Breezys Mega Quest - 1b Boss Battle
+-Breezys Mega Quest - 1c Fanfare
+
+Let's Go: Action 8bit Chiptune Theme by Theodore Kerr
+https://theodore-kerr.itch.io/lets-go-action-chiptune
+Copyrighted under license https://creativecommons.org/licenses/by/4.0/
+Song Used:
+-LetsGo-clean (unmodified)
+
+8-Bit Fantasy & Adventure Music Pack by xDeviruchi
+https://xdeviruchi.itch.io/8-bit-fantasy-adventure-music-pack
+Song Used:
+-xDeviruchi - Prepare for Battle!
+
+FREE Music Pack 3: Chiptune by Retro Indie Josh
+https://retroindiejosh.itch.io/free-music-pack-3
+Contains music ©2020 Joshua McLean (https://joshua-mclean.itch.io)
+Licensed under Creative Commons Attribution 4.0 International
+Song Used:
+-joshua-mclean_celebrate
+
+
+Fonts:
+DamienG
+https://damieng.com/typography/zx-origins/
+Fonts Used:
+-Homestead
+-Plotter
+-Prince
+-Eurostile"
+align = 1
+script = ExtResource( 6 )
+
+[node name="palette_client" parent="CanvasLayer/credits" instance=ExtResource( 3 )]
+index = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/credits"]
+unique_name_in_owner = true
+anims/RESET = SubResource( 10 )
+anims/play = SubResource( 11 )
+
+[node name="orchestrator" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+unique_name_in_owner = true
+stream = ExtResource( 7 )
+volume_db = -20.0
+bus = "music"
+
+[node name="music_start_timer" type="Timer" parent="music"]
+pause_mode = 2
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="music/music_start_timer" to="music" method="play"]

@@ -1,0 +1,209 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/menu/locale_menu_entry.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/menu/AchievementsMenu/AchievementsMenu.gd" type="Script" id=2]
+[ext_resource path="res://src/menu/AchievementsMenu/achievements.gd" type="Script" id=3]
+[ext_resource path="res://src/menu/PauseMenu/resume.gd" type="Script" id=4]
+[ext_resource path="res://src/menu/AchievementsMenu/achievement_entry.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/theme/default.tres" type="Theme" id=6]
+[ext_resource path="res://src/menu/AchievementsMenu/delete_progress.gd" type="Script" id=7]
+[ext_resource path="res://src/menu/AchievementsMenu/progress.gd" type="Script" id=8]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.345098, 0.27451, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0, 0, 1 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 135.0
+margin_top = 86.0
+margin_right = -135.0
+margin_bottom = -86.0
+theme = ExtResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+pause_mode = 2
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 369.0
+margin_bottom = 187.0
+
+[node name="title" type="Label" parent="PanelContainer/VBoxContainer"]
+margin_right = 368.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+text = "Achievements"
+align = 1
+valign = 1
+
+[node name="options" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 36.0
+margin_right = 368.0
+margin_bottom = 156.0
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer/options"]
+margin_right = 368.0
+margin_bottom = 80.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/options/CenterContainer"]
+margin_left = 26.0
+margin_right = 342.0
+margin_bottom = 80.0
+custom_constants/separation = 16
+alignment = 1
+
+[node name="achievements" type="GridContainer" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer"]
+margin_right = 108.0
+margin_bottom = 80.0
+columns = 4
+script = ExtResource( 3 )
+
+[node name="achievement_entry" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_right = 24.0
+margin_bottom = 24.0
+
+[node name="achievement_entry2" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 28.0
+margin_right = 52.0
+margin_bottom = 24.0
+
+[node name="achievement_entry3" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 56.0
+margin_right = 80.0
+margin_bottom = 24.0
+
+[node name="achievement_entry4" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 84.0
+margin_right = 108.0
+margin_bottom = 24.0
+
+[node name="achievement_entry5" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_top = 28.0
+margin_right = 24.0
+margin_bottom = 52.0
+
+[node name="achievement_entry6" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 28.0
+margin_top = 28.0
+margin_right = 52.0
+margin_bottom = 52.0
+
+[node name="achievement_entry7" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 56.0
+margin_top = 28.0
+margin_right = 80.0
+margin_bottom = 52.0
+
+[node name="achievement_entry8" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 84.0
+margin_top = 28.0
+margin_right = 108.0
+margin_bottom = 52.0
+
+[node name="achievement_entry9" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_top = 56.0
+margin_right = 24.0
+margin_bottom = 80.0
+
+[node name="achievement_entry10" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 28.0
+margin_top = 56.0
+margin_right = 52.0
+margin_bottom = 80.0
+
+[node name="achievement_entry11" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 56.0
+margin_top = 56.0
+margin_right = 80.0
+margin_bottom = 80.0
+
+[node name="achievement_entry12" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/achievements" instance=ExtResource( 5 )]
+margin_left = 84.0
+margin_top = 56.0
+margin_right = 108.0
+margin_bottom = 80.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer"]
+margin_left = 124.0
+margin_right = 316.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 192, 0 )
+custom_constants/separation = 7
+
+[node name="title" type="Label" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 192.0
+margin_bottom = 17.0
+rect_min_size = Vector2( 0, 17 )
+custom_colors/font_color = Color( 1, 0.835294, 0.521569, 1 )
+custom_constants/line_spacing = 1
+text = "Achievement Title"
+autowrap = true
+
+[node name="requirement" type="Label" parent="PanelContainer/VBoxContainer/options/CenterContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 24.0
+margin_right = 192.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 0, 17 )
+custom_constants/line_spacing = 1
+text = "Achievement Description"
+autowrap = true
+
+[node name="resume" parent="PanelContainer/VBoxContainer/options" instance=ExtResource( 1 )]
+margin_top = 84.0
+margin_right = 368.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 16 )
+text = "Go Back"
+
+[node name="resume" type="Node" parent="PanelContainer/VBoxContainer/options/resume"]
+script = ExtResource( 4 )
+
+[node name="delete_progress" parent="PanelContainer/VBoxContainer/options" instance=ExtResource( 1 )]
+margin_top = 104.0
+margin_right = 368.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 0, 16 )
+text = "Delete Progress (hold pressed for 2 seconds)"
+
+[node name="menu_entry" parent="PanelContainer/VBoxContainer/options/delete_progress" index="0"]
+margin_left = 0.0
+margin_top = 4.0
+margin_right = 368.0
+margin_bottom = 12.0
+
+[node name="label" parent="PanelContainer/VBoxContainer/options/delete_progress/menu_entry" index="1"]
+margin_right = 360.0
+text = "Delete Progress (hold pressed for 2 seconds)"
+
+[node name="progress" type="ProgressBar" parent="PanelContainer/VBoxContainer/options/delete_progress/menu_entry/label" index="0"]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+percent_visible = false
+script = ExtResource( 8 )
+timer_path = NodePath("../../../delete_progress/Timer")
+
+[node name="right_arrow" parent="PanelContainer/VBoxContainer/options/delete_progress/menu_entry" index="2"]
+margin_left = 360.0
+margin_right = 368.0
+
+[node name="delete_progress" type="Node" parent="PanelContainer/VBoxContainer/options/delete_progress"]
+script = ExtResource( 7 )
+
+[node name="Timer" type="Timer" parent="PanelContainer/VBoxContainer/options/delete_progress/delete_progress"]
+wait_time = 2.0
+one_shot = true
+
+[editable path="PanelContainer/VBoxContainer/options/delete_progress"]

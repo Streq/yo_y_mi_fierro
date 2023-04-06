@@ -48,4 +48,4 @@ func _on_spawner_spawn(who) -> void:
 		print(eastern_enemies_left_alive)
 func eastern_enemy_dead():
 	eastern_enemies_left_alive -= 1
-	print(eastern_enemies_left_alive)
+	

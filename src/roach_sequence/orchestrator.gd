@@ -43,13 +43,13 @@ func _ready() -> void:
 	yield(get_tree().create_timer(0.25),"timeout")
 	
 	Text.say_array(["Vos estás tapándole la entrada al baño a mi mujer?"])
+	intro.play()
 	yield(Text,"finished")
 	
 	yield(get_tree().create_timer(0.5),"timeout")
 	roach.facing_dir = -1.0
 	yield(get_tree().create_timer(0.5),"timeout")
 	
-	intro.play()
 	
 	Text.say_array(["Sí gato cuál hay"],"roach")
 	Text.say_array(["Que es mi casa y te tenés que ir."])
@@ -140,23 +140,23 @@ func _ready() -> void:
 	
 	Text.say_array(["Sí, ya era mucho si no"])
 	yield(Text,"done_with_all_text")
-	fight.play()
-	roach.facing_dir = -x_dist
-	roach.state_machine.current.goto("idle")
+#	fight.play()
+#	roach.facing_dir = -x_dist
+#	roach.state_machine.current.goto("idle")
 	Text.say_array(["Cerrá el culo gil, te voy a agarrar"],"roach")
-	yield(Text,"finished")
-	roach.state_machine.current.goto("dead")
+#	yield(Text,"finished")
+#	roach.state_machine.current.goto("dead")
 	
 	Text.say_array(["te lo juro gato, si no te agarro yo te van a agarrar mis hijos"],"roach")
-	play_for(fight,1.0)
+#	play_for(fight,1.0)
 	yield(Text,"finished")
 	Text.say_array(["Los voy a estar esperando CAPO, ahora con permiso tengo que ir de cuerpo."])
 	
 	yield(Text,"done_with_all_text")
-	play_for(fight,1.0)
+#	play_for(fight,1.0)
 	Text.say_array(["dale tomatelás cagón"],"roach")
 	yield(Text,"finished")
-	fight.stop()
+#	fight.stop()
 	roach.get_node("%death_free_anim").play()
 	stage_clear_music.play()
 	Text.say("GANASTE!!!!!")

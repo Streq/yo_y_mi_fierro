@@ -40,7 +40,7 @@
 [ext_resource path="res://assets/audio/music/recontra_free/boss_intro/Breezys Mega Quest - 1b Boss Battle.ogg" type="AudioStream" id=38]
 [ext_resource path="res://assets/audio/music/recontra_free/win/Breezys Mega Quest - 1c Fanfare.ogg" type="AudioStream" id=39]
 
-[sub_resource type="Image" id=528]
+[sub_resource type="Image" id=524]
 data = {
 "data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -49,10 +49,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=522]
+[sub_resource type="ImageTexture" id=503]
 flags = 0
 flags = 0
-image = SubResource( 528 )
+image = SubResource( 524 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=504]
@@ -61,7 +61,7 @@ shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0.0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 522 )
+shader_param/palette = SubResource( 503 )
 
 [sub_resource type="ConvexPolygonShape2D" id=419]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -374,7 +374,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="Image" id=529]
+[sub_resource type="Image" id=525]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 255, 222, 145, 255, 94, 84, 56, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -386,7 +386,7 @@ data = {
 [sub_resource type="ImageTexture" id=506]
 flags = 0
 flags = 0
-image = SubResource( 529 )
+image = SubResource( 525 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=507]
@@ -397,7 +397,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 506 )
 
-[sub_resource type="Image" id=530]
+[sub_resource type="Image" id=526]
 data = {
 "data": PoolByteArray( 240, 188, 60, 255, 71, 58, 0, 255, 41, 28, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -406,10 +406,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=525]
+[sub_resource type="ImageTexture" id=509]
 flags = 0
 flags = 0
-image = SubResource( 530 )
+image = SubResource( 526 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=510]
@@ -418,9 +418,9 @@ shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 525 )
+shader_param/palette = SubResource( 509 )
 
-[sub_resource type="Image" id=531]
+[sub_resource type="Image" id=527]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -429,10 +429,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=527]
+[sub_resource type="ImageTexture" id=512]
 flags = 0
 flags = 0
-image = SubResource( 531 )
+image = SubResource( 527 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=513]
@@ -441,13 +441,13 @@ shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 527 )
+shader_param/palette = SubResource( 512 )
 
 [sub_resource type="DynamicFont" id=394]
 size = 8
 font_data = ExtResource( 14 )
 
-[sub_resource type="Image" id=532]
+[sub_resource type="Image" id=528]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -459,7 +459,7 @@ data = {
 [sub_resource type="ImageTexture" id=515]
 flags = 0
 flags = 0
-image = SubResource( 532 )
+image = SubResource( 528 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=516]
@@ -470,7 +470,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 515 )
 
-[sub_resource type="Image" id=533]
+[sub_resource type="Image" id=529]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -482,7 +482,7 @@ data = {
 [sub_resource type="ImageTexture" id=375]
 flags = 0
 flags = 0
-image = SubResource( 533 )
+image = SubResource( 529 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=398]
@@ -493,7 +493,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 375 )
 
-[sub_resource type="Image" id=534]
+[sub_resource type="Image" id=530]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -505,7 +505,7 @@ data = {
 [sub_resource type="ImageTexture" id=519]
 flags = 0
 flags = 0
-image = SubResource( 534 )
+image = SubResource( 530 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=520]
@@ -516,7 +516,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 519 )
 
-[sub_resource type="Image" id=535]
+[sub_resource type="Image" id=531]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -525,21 +525,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=12]
+[sub_resource type="ImageTexture" id=522]
 flags = 0
 flags = 0
-image = SubResource( 535 )
+image = SubResource( 531 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=13]
+[sub_resource type="ShaderMaterial" id=523]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 12 )
+shader_param/palette = SubResource( 522 )
 
-[sub_resource type="Image" id=536]
+[sub_resource type="Image" id=532]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 117, 255, 0, 255, 8, 121, 38, 255, 0, 83, 48, 255 ),
 "format": "RGBA8",
@@ -551,7 +551,7 @@ data = {
 [sub_resource type="ImageTexture" id=379]
 flags = 0
 flags = 0
-image = SubResource( 536 )
+image = SubResource( 532 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=404]
@@ -824,7 +824,7 @@ texture = ExtResource( 15 )
 [node name="palette_client" parent="CanvasLayer2/HBoxContainer/TextureRect" instance=ExtResource( 4 )]
 
 [node name="weapon_texture" type="TextureRect" parent="CanvasLayer2/HBoxContainer/TextureRect"]
-material = SubResource( 13 )
+material = SubResource( 523 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 17 )

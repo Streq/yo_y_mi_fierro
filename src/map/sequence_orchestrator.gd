@@ -30,26 +30,38 @@ func _ready() -> void:
 	
 	GlobalPalette.reload()
 	
-	fade_out.blackout()
-	fade_out.fade_in(false, 1.0)
-	
-	howtoplay.show()
-	
-	intro_anim.play("play")
-	yield(get_tree().create_timer(0.5),"timeout")
-	yield(show_label(intro_display_text),"completed")
-	yield(get_tree().create_timer(0.2),"timeout")
-	yield(show_label(consigna_display_text),"completed")
-	howtoplay.show()
-	yield(get_tree().create_timer(0.2),"timeout")
-	yield(show_label(survive_display_text),"completed")
-	var hide_tween = create_tween()
-	hide_tween.tween_callback(intro_label,"hide").set_delay(5.0)
-	hide_tween.tween_callback(consigna_label,"hide")
-	hide_tween.tween_callback(howtoplay,"hide")
-	hide_tween.tween_callback(spawn_odds_change_animation,"play",["play"])
-	hide_tween.tween_callback(time_left,"start")
+		
+	if !Global.skip_intro:
+		fade_out.blackout()
+		fade_out.fade_in(false, 1.0)
 
+		howtoplay.show()
+		
+		intro_anim.play("play")
+		yield(get_tree().create_timer(0.5),"timeout")
+		yield(show_label(intro_display_text),"completed")
+		yield(get_tree().create_timer(0.2),"timeout")
+		yield(show_label(consigna_display_text),"completed")
+		howtoplay.show()
+		yield(get_tree().create_timer(0.2),"timeout")
+		yield(show_label(survive_display_text),"completed")
+		var hide_tween = create_tween()
+		hide_tween.tween_callback(intro_label,"hide").set_delay(5.0)
+		hide_tween.tween_callback(consigna_label,"hide")
+		hide_tween.tween_callback(howtoplay,"hide")
+		hide_tween.tween_callback(spawn_odds_change_animation,"play",["play"])
+		hide_tween.tween_callback(time_left,"start")
+	else:
+		intro_label.hide()
+		consigna_label.hide()
+		howtoplay.hide()
+		show_label(survive_display_text)
+#		yield(fade_out,"finished_fade_in")
+
+		spawn_odds_change_animation.play("play")
+		time_left.start()
+	
+	
 	
 	
 

@@ -45,7 +45,6 @@ func _on_spawner_spawn(who) -> void:
 	if who.facing_dir < 0.0:
 		eastern_enemies_left_alive += 1
 		who.connect("die",self,"eastern_enemy_dead")
-		print(eastern_enemies_left_alive)
 func eastern_enemy_dead():
 	eastern_enemies_left_alive -= 1
 	

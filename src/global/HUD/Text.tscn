@@ -12,7 +12,7 @@
 [ext_resource path="res://assets/theme/narrator.tres" type="Theme" id=10]
 [ext_resource path="res://assets/texture/black_square.png" type="Texture" id=11]
 
-[sub_resource type="Image" id=510]
+[sub_resource type="Image" id=15]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -21,21 +21,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=509]
+[sub_resource type="ImageTexture" id=10]
 flags = 0
 flags = 0
-image = SubResource( 510 )
+image = SubResource( 15 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=479]
+[sub_resource type="ShaderMaterial" id=11]
 resource_local_to_scene = true
 shader = ExtResource( 5 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 509 )
+shader_param/palette = SubResource( 10 )
 
-[sub_resource type="Image" id=511]
+[sub_resource type="Image" id=16]
 data = {
 "data": PoolByteArray( 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 ),
 "format": "RGBA8",
@@ -44,21 +44,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=2]
+[sub_resource type="ImageTexture" id=13]
 flags = 0
 flags = 0
-image = SubResource( 511 )
+image = SubResource( 16 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=14]
 resource_local_to_scene = true
 shader = ExtResource( 5 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 2 )
+shader_param/palette = SubResource( 13 )
 
-[sub_resource type="Image" id=512]
+[sub_resource type="Image" id=17]
 data = {
 "data": PoolByteArray( 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255 ),
 "format": "RGBA8",
@@ -70,7 +70,7 @@ data = {
 [sub_resource type="ImageTexture" id=4]
 flags = 0
 flags = 0
-image = SubResource( 512 )
+image = SubResource( 17 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=5]
@@ -114,7 +114,7 @@ tracks/0/keys = {
 
 [node name="text" type="CanvasLayer"]
 pause_mode = 2
-layer = 126
+layer = 99
 script = ExtResource( 2 )
 
 [node name="labels" type="Control" parent="."]
@@ -143,7 +143,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="labels/default/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 479 )
+material = SubResource( 11 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 208.0
@@ -181,7 +181,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="labels/roach/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 479 )
+material = SubResource( 11 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 208.0
@@ -216,7 +216,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="labels/wife/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 479 )
+material = SubResource( 11 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 208.0
@@ -258,7 +258,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="labels/narrator/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 479 )
+material = SubResource( 11 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 208.0
@@ -273,7 +273,7 @@ index = 1
 
 [node name="continue" type="Control" parent="."]
 visible = false
-material = SubResource( 3 )
+material = SubResource( 14 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 7 )

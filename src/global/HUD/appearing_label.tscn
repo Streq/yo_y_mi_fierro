@@ -27,5 +27,6 @@ script = ExtResource( 3 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
 volume_db = -24.0
+bus = "sfx"
 script = ExtResource( 5 )
 cooldown = 0.0166667

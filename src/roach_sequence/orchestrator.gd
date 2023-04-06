@@ -140,7 +140,7 @@ func _ready() -> void:
 	
 	Text.say_array(["Sí, ya era mucho si no"])
 	yield(Text,"done_with_all_text")
-#	fight.play()
+	intro.play()
 #	roach.facing_dir = -x_dist
 #	roach.state_machine.current.goto("idle")
 	Text.say_array(["Cerrá el culo gil, te voy a agarrar"],"roach")
@@ -154,6 +154,7 @@ func _ready() -> void:
 	
 	yield(Text,"done_with_all_text")
 #	play_for(fight,1.0)
+	intro.stop()
 	Text.say_array(["dale tomatelás cagón"],"roach")
 	yield(Text,"finished")
 #	fight.stop()

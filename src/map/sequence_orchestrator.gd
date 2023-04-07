@@ -24,6 +24,7 @@ onready var time_left: Timer = $"../time_left"
 
 onready var intro: Control = $"../CanvasLayer2/intro"
 onready var howtoplay: TextureRect = $"%howtoplay"
+onready var music: AudioStreamPlayer = $"%music"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -52,6 +53,7 @@ func _ready() -> void:
 		hide_tween.tween_callback(spawn_odds_change_animation,"play",["play"])
 		hide_tween.tween_callback(time_left,"start")
 	else:
+		music.play()
 		intro_label.hide()
 		consigna_label.hide()
 		howtoplay.hide()

@@ -52,7 +52,7 @@
 [ext_resource path="res://assets/aseprite/mockup/howtoplay.png" type="Texture" id=50]
 [ext_resource path="res://src/map/achievement_tracker.gd" type="Script" id=51]
 
-[sub_resource type="Image" id=513]
+[sub_resource type="Image" id=454]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -61,19 +61,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=474]
+[sub_resource type="ImageTexture" id=442]
 flags = 0
 flags = 0
-image = SubResource( 513 )
+image = SubResource( 454 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=475]
+[sub_resource type="ShaderMaterial" id=443]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 474 )
+shader_param/palette = SubResource( 442 )
 
 [sub_resource type="RectangleShape2D" id=57]
 extents = Vector2( 8, 336 )
@@ -85,7 +85,7 @@ extents = Vector2( 7.99944, 368 )
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="Image" id=514]
+[sub_resource type="Image" id=455]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -94,21 +94,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=10]
+[sub_resource type="ImageTexture" id=445]
 flags = 0
 flags = 0
-image = SubResource( 514 )
+image = SubResource( 455 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=11]
+[sub_resource type="ShaderMaterial" id=446]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 10 )
+shader_param/palette = SubResource( 445 )
 
-[sub_resource type="Image" id=515]
+[sub_resource type="Image" id=456]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -117,21 +117,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=511]
+[sub_resource type="ImageTexture" id=448]
 flags = 0
 flags = 0
-image = SubResource( 515 )
+image = SubResource( 456 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=512]
+[sub_resource type="ShaderMaterial" id=449]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 511 )
+shader_param/palette = SubResource( 448 )
 
-[sub_resource type="Image" id=516]
+[sub_resource type="Image" id=457]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -143,7 +143,7 @@ data = {
 [sub_resource type="ImageTexture" id=406]
 flags = 0
 flags = 0
-image = SubResource( 516 )
+image = SubResource( 457 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=96]
@@ -154,7 +154,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 406 )
 
-[sub_resource type="Image" id=517]
+[sub_resource type="Image" id=458]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -163,21 +163,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=483]
+[sub_resource type="ImageTexture" id=452]
 flags = 0
 flags = 0
-image = SubResource( 517 )
+image = SubResource( 458 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=484]
+[sub_resource type="ShaderMaterial" id=453]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 483 )
+shader_param/palette = SubResource( 452 )
 
-[sub_resource type="Image" id=518]
+[sub_resource type="Image" id=459]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 117, 255, 0, 255, 8, 121, 38, 255, 0, 83, 48, 255 ),
 "format": "RGBA8",
@@ -189,7 +189,7 @@ data = {
 [sub_resource type="ImageTexture" id=440]
 flags = 0
 flags = 0
-image = SubResource( 518 )
+image = SubResource( 459 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=243]
@@ -497,7 +497,7 @@ layer = -1
 [node name="Sprite" type="TextureRect" parent="CanvasLayer"]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-material = SubResource( 475 )
+material = SubResource( 443 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 10 )
@@ -709,7 +709,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/intro/intro_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 264.0
@@ -761,7 +761,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/intro/consigna_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 264.0
@@ -784,7 +784,7 @@ wait_time = 3.0
 
 [node name="howtoplay" type="TextureRect" parent="CanvasLayer2"]
 unique_name_in_owner = true
-material = SubResource( 512 )
+material = SubResource( 449 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -829,7 +829,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 40.0
@@ -874,7 +874,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label2/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 48.0
@@ -919,7 +919,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label3/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 48.0
@@ -969,7 +969,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/win_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 248.0
@@ -1022,7 +1022,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/lose_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 248.0
@@ -1104,7 +1104,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2/HBoxContainer"]
-material = SubResource( 512 )
+material = SubResource( 449 )
 margin_left = 36.0
 margin_right = 52.0
 margin_bottom = 16.0
@@ -1113,7 +1113,7 @@ texture = ExtResource( 8 )
 [node name="palette_client" parent="CanvasLayer2/HBoxContainer/TextureRect" instance=ExtResource( 1 )]
 
 [node name="weapon_texture" type="TextureRect" parent="CanvasLayer2/HBoxContainer/TextureRect"]
-material = SubResource( 484 )
+material = SubResource( 453 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 16 )
@@ -1238,6 +1238,7 @@ bus = "music"
 
 [node name="music" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
+unique_name_in_owner = true
 stream = ExtResource( 39 )
 volume_db = -7.0
 bus = "music"
@@ -1286,7 +1287,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="intro_label4/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 11 )
+material = SubResource( 446 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 88.0

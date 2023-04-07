@@ -17,7 +17,9 @@ func enter():
 	while focusable.focus_mode != Control.FOCUS_ALL:
 		focusable = focusable.get_child(0)
 	focusable.grab_focus()
-	
+	var last : Control = options.get_children().back()
+	last.focus_neighbour_bottom = focusable.get_path()
+	focusable.focus_neighbour_top = last.get_path()
 	
 	emit_signal("enter")
 

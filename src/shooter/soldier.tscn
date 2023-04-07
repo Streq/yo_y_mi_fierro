@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=1]
 [ext_resource path="res://src/fighter/hitbox/hitbox_frame.tscn" type="PackedScene" id=2]
@@ -25,11 +25,12 @@
 [ext_resource path="res://assets/audio/sfx/hit_the_ground.wav" type="AudioStream" id=23]
 [ext_resource path="res://assets/audio/sfx/blindado2.wav" type="AudioStream" id=24]
 [ext_resource path="res://src/shooter/floor_aim.gd" type="Script" id=25]
+[ext_resource path="res://src/shooter/shield.tscn" type="PackedScene" id=26]
 
 [sub_resource type="RectangleShape2D" id=93]
 extents = Vector2( 4, 7 )
 
-[sub_resource type="Image" id=523]
+[sub_resource type="Image" id=283]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -38,19 +39,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=12]
+[sub_resource type="ImageTexture" id=37]
 flags = 0
 flags = 0
-image = SubResource( 523 )
+image = SubResource( 283 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=13]
+[sub_resource type="ShaderMaterial" id=38]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 12 )
+shader_param/palette = SubResource( 37 )
 
 [sub_resource type="RectangleShape2D" id=95]
 extents = Vector2( 5.5, 5.5 )
@@ -603,7 +604,7 @@ tracks/1/keys = {
 "values": [ false ]
 }
 
-[sub_resource type="Image" id=524]
+[sub_resource type="Image" id=284]
 data = {
 "data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -612,19 +613,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=522]
+[sub_resource type="ImageTexture" id=40]
 flags = 0
 flags = 0
-image = SubResource( 524 )
+image = SubResource( 284 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=504]
+[sub_resource type="ShaderMaterial" id=41]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0.0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 522 )
+shader_param/palette = SubResource( 40 )
 
 [sub_resource type="AtlasTexture" id=110]
 flags = 2
@@ -680,7 +681,7 @@ shape = SubResource( 93 )
 
 [node name="Sprite" type="Sprite" parent="pivot"]
 visible = false
-material = SubResource( 13 )
+material = SubResource( 38 )
 texture = ExtResource( 12 )
 hframes = 3
 vframes = 2
@@ -782,7 +783,7 @@ value = 16.0
 
 [node name="hud_bar" type="TextureProgress" parent="."]
 visible = false
-material = SubResource( 504 )
+material = SubResource( 41 )
 margin_left = -8.0
 margin_top = -11.0
 margin_right = 8.0
@@ -813,6 +814,8 @@ bus = "sfx"
 [node name="blindado" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 24 )
 bus = "sfx"
+
+[node name="shield" parent="." instance=ExtResource( 26 )]
 
 [connection signal="die" from="." to="pivot/gun_pivot" method="disable"]
 [connection signal="die" from="." to="hud_bar" method="hide"]

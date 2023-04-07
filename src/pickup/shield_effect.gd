@@ -3,7 +3,7 @@ extends Node
 export var time := 5.0
 export var ending := 3.0
 
-func apply(on:Node):
+func apply_old(on:Node):
 	if on.is_in_group("invulnerable"):
 		return
 	NodeUtils.reparent(self,on)
@@ -18,3 +18,8 @@ func apply(on:Node):
 	on.palette_animation.play("RESET")
 	queue_free()
 	pass
+
+func apply(on:Node):
+	var shield = on.get_node("%shield")
+	shield.increase(8.0)
+	queue_free()

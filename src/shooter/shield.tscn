@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/shooter/bar.gd" type="Script" id=1]
+[ext_resource path="res://src/shooter/shield.gd" type="Script" id=2]
+
+[node name="shield" type="Node"]
+unique_name_in_owner = true
+script = ExtResource( 2 )
+
+[node name="bar" type="Node" parent="."]
+script = ExtResource( 1 )
+max_value = 16.0
+value = 0.0

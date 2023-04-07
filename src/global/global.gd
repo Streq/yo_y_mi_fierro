@@ -21,6 +21,7 @@ Shoulda Picked Another Bathroom Dumbass - Beat the final boss without getting hu
 export var weapon := "gun"
 
 export var skip_intro := false
+export var language_chosen := false
 
 func _unhandled_input(event: InputEvent) -> void:
 	

@@ -2,7 +2,7 @@ extends Node2D
 signal dead_enemies_changed(val)
 signal spawned_enemies_changed(val)
 signal win()
-
+signal score_changed(val)
 onready var win_anim: AnimationPlayer = $win_anim
 onready var fade_out_win_anim: AnimationPlayer = $fade_out_win_anim
 onready var time_left: Timer = $time_left
@@ -14,6 +14,8 @@ onready var soldier: KinematicBody2D = $soldier
 var outcome_decided = false
 var dead_enemies = 0
 var enemies_spawned = 0
+
+var score := 0
 
 func lose():
 	if outcome_decided:
@@ -43,7 +45,7 @@ func win():
 	spawner_timer.paused = true
 	get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME,"enemy","die")
 	emit_signal("win")
-	
+	Achievements.submit_highscore(score)
 	yield(win_display_text, "finished")
 	fade_out_win_anim.play("play")
 	yield(fade_out_win_anim,"animation_finished")
@@ -69,13 +71,22 @@ func _input(event: InputEvent) -> void:
 
 func _enemy_died():
 	dead_enemies += 1
+	set_score(score + 100)
 	emit_signal("dead_enemies_changed",dead_enemies)
 
+func _player_hit():
+	set_score(score - 10)
+	
 
 func _ready() -> void:
 	emit_signal("dead_enemies_changed",dead_enemies)
+	soldier.connect("took_hit",self,"_player_hit")
 	
 func _on_spawner_spawn(who) -> void:
 	who.connect("die",self,"_enemy_died")
 	enemies_spawned += 1
 	emit_signal("spawned_enemies_changed",enemies_spawned)
+
+func set_score(new_score):
+	score = new_score
+	emit_signal("score_changed",score)

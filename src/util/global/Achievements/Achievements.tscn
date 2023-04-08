@@ -105,4 +105,5 @@ id_map = {
 
 [connection signal="changed" from="." to="storage" method="save_to_file"]
 [connection signal="complete" from="." to="newgrounds_notifier" method="completed"]
+[connection signal="highscore" from="." to="newgrounds_notifier" method="highscore"]
 [connection signal="ready" from="." to="storage" method="load_from_file"]

@@ -4,6 +4,8 @@ var SAVE_PATH := "user://achievements.save"
 
 export var disabled := false
 
+const HIGHSCORE = "highscore"
+
 func load_from_file():
 	if disabled:
 		return
@@ -19,6 +21,9 @@ func load_from_file():
 				var val = save[achievement.name]
 				achievement.completed = val
 				print(achievement.name," ",achievement.completed)
+		if save.has(HIGHSCORE):
+			var val = save[HIGHSCORE]
+			owner.highscore = val
 	save_game.close()
 
 func clear():
@@ -35,6 +40,6 @@ func save_to_file():
 	for achievement in owner.map.values():
 		var val = achievement.completed
 		save[achievement.name] = val
-	
+	save[HIGHSCORE] = owner.highscore
 	save_game.store_var(save)
 	save_game.close()

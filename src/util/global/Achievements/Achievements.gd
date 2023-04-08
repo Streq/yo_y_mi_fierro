@@ -5,7 +5,13 @@ signal changed()
 signal complete(achievement_name)
 signal completed(achievement)
 
+signal highscore(value)
+signal highscore_updated()
+
 var map = {}
+
+var highscore : int = 0
+
 onready var list: Node = $"%list"
 
 func _ready() -> void:
@@ -38,4 +44,12 @@ func sync_achievements():
 func clear():
 	for achievement in map.values():
 		achievement.completed = false
+	highscore = 0
 	emit_signal("changed")
+
+func submit_highscore(score):
+	highscore = max(highscore, score)
+	emit_signal("highscore",score)
+	emit_signal("highscore_updated")
+	emit_signal("changed")
+	

@@ -15,12 +15,11 @@ onready var survive_label: Label = $"../CanvasLayer2/survive_label"
 onready var intro_display_text: Node = $"../CanvasLayer2/intro/intro_label/display_text"
 onready var consigna_display_text: Node = $"../CanvasLayer2/intro/consigna_label/display_text"
 onready var win_display_text: Node = $"../CanvasLayer2/win_label/display_text"
-onready var lose_display_text: Node = $"%display_text"
-onready var survive_display_text: Node = $"%survive_display_text"
+onready var lose_display_text: Node = $"../CanvasLayer2/lose_label/display_text"
+onready var survive_display_text: Node = $"../CanvasLayer2/survive_label/display_text"
 
 onready var fade_out: Node = $"../fade_out"
 
-onready var time_left: Timer = $"../time_left"
 
 onready var intro: Control = $"../CanvasLayer2/intro"
 onready var howtoplay: TextureRect = $"%howtoplay"
@@ -32,36 +31,14 @@ func _ready() -> void:
 	GlobalPalette.reload()
 	
 		
-	if !Global.skip_intro:
-		fade_out.blackout()
-		fade_out.fade_in(false, 1.0)
 
-		howtoplay.show()
-		
-		intro_anim.play("play")
-		yield(get_tree().create_timer(0.5),"timeout")
-		yield(show_label(intro_display_text),"completed")
-		yield(get_tree().create_timer(0.2),"timeout")
-		yield(show_label(consigna_display_text),"completed")
-		howtoplay.show()
-		yield(get_tree().create_timer(0.2),"timeout")
-		yield(show_label(survive_display_text),"completed")
-		var hide_tween = create_tween()
-		hide_tween.tween_callback(intro_label,"hide").set_delay(5.0)
-		hide_tween.tween_callback(consigna_label,"hide")
-		hide_tween.tween_callback(howtoplay,"hide")
-		hide_tween.tween_callback(spawn_odds_change_animation,"play",["play"])
-		hide_tween.tween_callback(time_left,"start")
-	else:
-		music.play()
-		intro_label.hide()
-		consigna_label.hide()
-		howtoplay.hide()
-		show_label(survive_display_text)
-#		yield(fade_out,"finished_fade_in")
+	music.play()
+	intro_label.hide()
+	consigna_label.hide()
+	howtoplay.hide()
+	show_label(survive_display_text)
 
-		spawn_odds_change_animation.play("play")
-		time_left.start()
+	spawn_odds_change_animation.play("play")
 	
 	
 	

@@ -12,4 +12,4 @@ func _ready() -> void:
 	timer.connect("timeout",self,"timeout")
 
 func timeout():
-	hide()
+	text=tr("SOBREVIVI %02d SEGUNDOS") % 0

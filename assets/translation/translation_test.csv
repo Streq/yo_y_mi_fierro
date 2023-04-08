@@ -39,7 +39,8 @@ dale tomatelás cagón,yeah go ahead,dale sí perdón,dale sí perdón
 Z to continue,Z to continue,Z para continuar,Z para continuar
 JUMP,JUMP,SALTAR,SALTAR
 SHOOT,SHOOT,DISPARAR,DISPARAR
-MUERTES: %d,KILLS: %d,MUERTES: %d,MUERTES: %d
+MUERTES:%d,KILLS:%d,MUERTES:%d,MUERTES:%d
+SCORE:%d,SCORE:%d,PUNTAJE:%d,PUNTAJE:%d
 Workday Over,Workday Over,A Casita,A Casita
 Beat the war level,Beat the war level,Ganar el nivel de guerra,Ganar el nivel de guerra
 Fear of Pickups,Fear of Pickups,Con la pistolita ando bien,Con la pistolita ando bien

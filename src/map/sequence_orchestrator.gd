@@ -25,12 +25,15 @@ onready var time_left: Timer = $"../time_left"
 onready var intro: Control = $"../CanvasLayer2/intro"
 onready var howtoplay: TextureRect = $"%howtoplay"
 onready var music: AudioStreamPlayer = $"%music"
+onready var dead_enemies: Label = $"%dead_enemies"
+onready var score: Label = $"%score"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	
 	GlobalPalette.reload()
-	
+	dead_enemies.hide()
+	score.hide()
 		
 	if !Global.skip_intro:
 		fade_out.blackout()
@@ -46,6 +49,10 @@ func _ready() -> void:
 		howtoplay.show()
 		yield(get_tree().create_timer(0.2),"timeout")
 		yield(show_label(survive_display_text),"completed")
+		yield(get_tree().create_timer(0.2),"timeout")
+		dead_enemies.show()
+		yield(get_tree().create_timer(0.2),"timeout")
+		score.show()
 		var hide_tween = create_tween()
 		hide_tween.tween_callback(intro_label,"hide").set_delay(5.0)
 		hide_tween.tween_callback(consigna_label,"hide")
@@ -57,7 +64,12 @@ func _ready() -> void:
 		intro_label.hide()
 		consigna_label.hide()
 		howtoplay.hide()
-		show_label(survive_display_text)
+		yield(show_label(survive_display_text),"completed")
+		yield(get_tree().create_timer(0.2),"timeout")
+		dead_enemies.show()
+		yield(get_tree().create_timer(0.2),"timeout")
+		score.show()
+		
 #		yield(fade_out,"finished_fade_in")
 
 		spawn_odds_change_animation.play("play")

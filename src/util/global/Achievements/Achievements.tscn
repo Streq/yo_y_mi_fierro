@@ -102,6 +102,7 @@ id_map = {
 "pacifist": 73369,
 "starting_gun": 73372
 }
+highscore_id = 12719
 
 [connection signal="changed" from="." to="storage" method="save_to_file"]
 [connection signal="complete" from="." to="newgrounds_notifier" method="completed"]

@@ -1,7 +1,5 @@
 extends KinematicBody2D
 
-
-
 signal got_hit(by)
 signal took_hit()
 signal took_damage(amount)

@@ -27,6 +27,7 @@ onready var howtoplay: TextureRect = $"%howtoplay"
 onready var music: AudioStreamPlayer = $"%music"
 onready var dead_enemies: Label = $"%dead_enemies"
 onready var score: Label = $"%score"
+onready var spawner: Node2D = $"../spawner"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -59,6 +60,9 @@ func _ready() -> void:
 		hide_tween.tween_callback(howtoplay,"hide")
 		hide_tween.tween_callback(spawn_odds_change_animation,"play",["play"])
 		hide_tween.tween_callback(time_left,"start")
+		hide_tween.tween_callback(spawner,"activate")
+		
+		
 	else:
 		music.play()
 		intro_label.hide()
@@ -74,7 +78,7 @@ func _ready() -> void:
 
 		spawn_odds_change_animation.play("play")
 		time_left.start()
-	
+		spawner.activate()
 	
 	
 	

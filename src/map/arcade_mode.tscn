@@ -271,7 +271,7 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ 0.0 ]
+"values": [ 10.0 ]
 }
 
 [sub_resource type="Animation" id=64]
@@ -546,20 +546,20 @@ script = ExtResource( 7 )
 point_source_path = NodePath("../spawn_point_source")
 spawn_source_path = NodePath("../spawn_source")
 
-[node name="Timer" type="Timer" parent="spawner"]
+[node name="spawn_timer" type="Timer" parent="spawner"]
+unique_name_in_owner = true
 process_mode = 0
 wait_time = 2.0
-autostart = true
 
-[node name="decrease_wait_time_with_time" type="Node" parent="spawner/Timer"]
+[node name="decrease_wait_time_with_time" type="Node" parent="spawner/spawn_timer"]
 script = ExtResource( 27 )
 min_time = 0.75
 time_step = 0.166667
 
-[node name="Timer" type="Timer" parent="spawner/Timer/decrease_wait_time_with_time"]
+[node name="decrease_rate_timer" type="Timer" parent="spawner/spawn_timer/decrease_wait_time_with_time"]
+unique_name_in_owner = true
 process_mode = 0
 wait_time = 10.0
-autostart = true
 
 [node name="spawn_point_source" type="Node2D" parent="."]
 script = ExtResource( 6 )
@@ -673,6 +673,7 @@ script = ExtResource( 12 )
 [node name="mook" type="Node" parent="spawn_source"]
 script = ExtResource( 13 )
 scene = ExtResource( 19 )
+weight = 10.0
 
 [node name="aim_mook" type="Node" parent="spawn_source"]
 script = ExtResource( 13 )
@@ -1382,8 +1383,8 @@ index = 1
 [connection signal="win" from="." to="achievement_tracker" method="_on_win"]
 [connection signal="spawn" from="spawner" to="." method="_on_spawner_spawn"]
 [connection signal="spawn" from="spawner" to="achievement_tracker" method="_on_spawner_spawn"]
-[connection signal="timeout" from="spawner/Timer" to="spawner" method="spawn"]
-[connection signal="timeout" from="spawner/Timer/decrease_wait_time_with_time/Timer" to="spawner/Timer/decrease_wait_time_with_time" method="_on_Timer_timeout"]
+[connection signal="timeout" from="spawner/spawn_timer" to="spawner" method="spawn"]
+[connection signal="timeout" from="spawner/spawn_timer/decrease_wait_time_with_time/decrease_rate_timer" to="spawner/spawn_timer/decrease_wait_time_with_time" method="_on_Timer_timeout"]
 [connection signal="die" from="soldier" to="." method="_on_soldier_die"]
 [connection signal="weapon_change" from="soldier" to="CanvasLayer2/HBoxContainer/TextureRect/weapon_texture" method="_on_weapon_change"]
 [connection signal="body_entered" from="despawn_zone" to="despawn_zone" method="_on_despawn_zone_body_entered"]

@@ -5,6 +5,8 @@ onready var point_source = get_node(point_source_path)
 
 export var spawn_source_path : NodePath
 onready var spawn_source = get_node(spawn_source_path)
+onready var spawn_timer: Timer = $"%spawn_timer"
+onready var decrease_rate_timer: Timer = $"%decrease_rate_timer"
 
 func spawn():
 	var spawn_point : SpawnPoint = point_source.get_point()
@@ -20,3 +22,8 @@ func spawn():
 	entity.global_transform = spawn_point.global_transform
 	entity.add_to_group("enemy")
 	emit_signal("spawn", entity)
+
+func activate():
+	spawn_timer.start()
+	decrease_rate_timer.start()
+	spawn()

@@ -46,6 +46,7 @@ func clear():
 		achievement.completed = false
 	highscore = 0
 	emit_signal("changed")
+	emit_signal("highscore_updated")
 
 func submit_highscore(score):
 	highscore = max(highscore, score)

@@ -6,3 +6,4 @@
 pause_mode = 2
 script = ExtResource( 1 )
 weapon = "shotgun"
+skip_roach_intro = true

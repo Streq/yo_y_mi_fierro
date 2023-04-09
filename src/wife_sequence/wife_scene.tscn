@@ -25,7 +25,7 @@
 [ext_resource path="res://assets/aseprite/mockup/wife_room_furniture.png" type="Texture" id=23]
 [ext_resource path="res://assets/audio/music/recontra_free/wife/joshua-mclean_celebrate.ogg" type="AudioStream" id=24]
 
-[sub_resource type="Image" id=485]
+[sub_resource type="Image" id=523]
 data = {
 "data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -34,19 +34,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=465]
+[sub_resource type="ImageTexture" id=503]
 flags = 0
 flags = 0
-image = SubResource( 485 )
+image = SubResource( 523 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=466]
+[sub_resource type="ShaderMaterial" id=504]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0.0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 465 )
+shader_param/palette = SubResource( 503 )
 
 [sub_resource type="ConvexPolygonShape2D" id=419]
 points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
@@ -359,7 +359,7 @@ points = PoolVector2Array( 16, 16, 0, 16, 0, 0, 16, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="Image" id=486]
+[sub_resource type="Image" id=524]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 255, 222, 145, 255, 217, 201, 152, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -368,21 +368,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=468]
+[sub_resource type="ImageTexture" id=513]
 flags = 0
 flags = 0
-image = SubResource( 486 )
+image = SubResource( 524 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=469]
+[sub_resource type="ShaderMaterial" id=514]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 468 )
+shader_param/palette = SubResource( 513 )
 
-[sub_resource type="Image" id=487]
+[sub_resource type="Image" id=525]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 255, 255, 57, 255, 255, 132, 8, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -391,21 +391,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=471]
+[sub_resource type="ImageTexture" id=516]
 flags = 0
 flags = 0
-image = SubResource( 487 )
+image = SubResource( 525 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=472]
+[sub_resource type="ShaderMaterial" id=517]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 471 )
+shader_param/palette = SubResource( 516 )
 
-[sub_resource type="Image" id=488]
+[sub_resource type="Image" id=526]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -414,21 +414,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=474]
+[sub_resource type="ImageTexture" id=476]
 flags = 0
 flags = 0
-image = SubResource( 488 )
+image = SubResource( 526 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=475]
+[sub_resource type="ShaderMaterial" id=477]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 474 )
+shader_param/palette = SubResource( 476 )
 
-[sub_resource type="Image" id=489]
+[sub_resource type="Image" id=527]
 data = {
 "data": PoolByteArray( 240, 188, 60, 255, 71, 58, 0, 255, 41, 28, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -437,21 +437,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=477]
+[sub_resource type="ImageTexture" id=509]
 flags = 0
 flags = 0
-image = SubResource( 489 )
+image = SubResource( 527 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=478]
+[sub_resource type="ShaderMaterial" id=510]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 477 )
+shader_param/palette = SubResource( 509 )
 
-[sub_resource type="Image" id=490]
+[sub_resource type="Image" id=528]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 188, 188, 188, 255, 60, 188, 252, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -460,21 +460,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=480]
+[sub_resource type="ImageTexture" id=521]
 flags = 0
 flags = 0
-image = SubResource( 490 )
+image = SubResource( 528 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=481]
+[sub_resource type="ShaderMaterial" id=522]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 480 )
+shader_param/palette = SubResource( 521 )
 
-[sub_resource type="Image" id=491]
+[sub_resource type="Image" id=529]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -483,19 +483,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=483]
+[sub_resource type="ImageTexture" id=486]
 flags = 0
 flags = 0
-image = SubResource( 491 )
+image = SubResource( 529 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=484]
+[sub_resource type="ShaderMaterial" id=487]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 483 )
+shader_param/palette = SubResource( 486 )
 
 [sub_resource type="RectangleShape2D" id=432]
 extents = Vector2( 33, 10 )
@@ -506,7 +506,7 @@ extents = Vector2( 2, 10 )
 [node name="wife_scene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-material = SubResource( 466 )
+material = SubResource( 504 )
 position = Vector2( 0, 4 )
 tile_set = SubResource( 425 )
 cell_size = Vector2( 16, 16 )
@@ -519,7 +519,7 @@ tile_data = PoolIntArray( -65540, 0, 8, -65539, 0, 10, -65538, 0, 10, -65537, 0,
 index = 2
 
 [node name="background_facade" type="Sprite" parent="."]
-material = SubResource( 469 )
+material = SubResource( 514 )
 texture = ExtResource( 19 )
 centered = false
 
@@ -527,7 +527,7 @@ centered = false
 index = 9
 
 [node name="light_facade" type="Sprite" parent="."]
-material = SubResource( 472 )
+material = SubResource( 517 )
 texture = ExtResource( 22 )
 centered = false
 
@@ -535,7 +535,7 @@ centered = false
 index = 4
 
 [node name="windows_facade" type="Sprite" parent="."]
-material = SubResource( 475 )
+material = SubResource( 477 )
 texture = ExtResource( 21 )
 centered = false
 
@@ -543,7 +543,7 @@ centered = false
 index = 3
 
 [node name="furniture_facade" type="Sprite" parent="."]
-material = SubResource( 478 )
+material = SubResource( 510 )
 texture = ExtResource( 23 )
 centered = false
 
@@ -551,7 +551,7 @@ centered = false
 index = 5
 
 [node name="fridge_n_stuff_facade" type="Sprite" parent="."]
-material = SubResource( 481 )
+material = SubResource( 522 )
 texture = ExtResource( 20 )
 centered = false
 
@@ -560,7 +560,7 @@ index = 6
 
 [node name="wife" parent="." instance=ExtResource( 4 )]
 unique_name_in_owner = true
-material = SubResource( 484 )
+material = SubResource( 487 )
 
 [node name="player_close_to_wife_area" type="Area2D" parent="wife"]
 unique_name_in_owner = true
@@ -622,7 +622,7 @@ fade_level = 3
 
 [node name="heart" type="Sprite" parent="."]
 visible = false
-material = SubResource( 484 )
+material = SubResource( 487 )
 position = Vector2( 324, 233 )
 texture = ExtResource( 18 )
 

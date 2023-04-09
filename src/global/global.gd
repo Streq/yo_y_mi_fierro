@@ -23,6 +23,7 @@ export var weapon := "gun"
 export var skip_intro := false
 export var language_chosen := false
 
+export var skip_roach_intro := false
 func _unhandled_input(event: InputEvent) -> void:
 	
 #	if event.is_action_pressed("exit"):

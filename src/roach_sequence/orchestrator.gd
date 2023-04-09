@@ -21,69 +21,83 @@ var player_hurt = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	Text.clear_queue()
+	Text.clear()
+	
 	player.connect("took_hit",self,"_on_player_hurt")
 	player_exit_area.set_physics_process(false)
-	player.hide()
-	
 	player.connect("die",self,"restart")
-	
-	boss_bar.hide()
-	GlobalPalette.reload()
-	fade_out.fade_in(false, 0.25)
-	yield(fade_out,"finished_fade_in")
-	yield(get_tree().create_timer(0.5),"timeout")
-	player.show()
-	
-	player.input_state.dir.x = 1.0
-	
-	yield(get_tree().create_timer(0.25),"timeout")
-	
-	player.input_state.dir.x = 0.0
+	if Global.skip_roach_intro:
+		GlobalPalette.reload()
+		fade_out.fade_in(false, 0.0)
+		roach.global_position = Vector2(156,238)
+		player.global_position = Vector2(119,252)
+	#intro
+	if !Global.skip_roach_intro:
+		Global.skip_roach_intro = true
+		player.hide()
+		boss_bar.hide()
+		GlobalPalette.reload()
+		fade_out.fade_in(false, 0.2)
+		yield(fade_out,"finished_fade_in")
+		yield(get_tree().create_timer(0.5),"timeout")
+		player.show()
+		
+		player.input_state.dir.x = 1.0
+		
+		yield(get_tree().create_timer(0.25),"timeout")
+		
+		player.input_state.dir.x = 0.0
+		
+		yield(get_tree().create_timer(0.25),"timeout")
+		print(player.position)
 
-	yield(get_tree().create_timer(0.25),"timeout")
+		Text.say_array(["Vos estás tapándole la entrada al baño a mi mujer?"])
+		intro.play()
+		yield(Text,"finished")
+		
+		yield(get_tree().create_timer(0.5),"timeout")
+		roach.facing_dir = -1.0
+		yield(get_tree().create_timer(0.5),"timeout")
+		
+		
+		Text.say_array(["Sí gato cuál hay"],"roach")
+		Text.say_array(["Que es mi casa y te tenés que ir."])
+		
+		Text.say_array(["Perdón no te escuché."],"roach")
+		Text.say_array(["Es mi casa y te tenés que ir."])
+		
+		yield(Text,"finished")
+		
+		roach.input_state.dir = Vector2.LEFT
+		yield(roach_detect,"body_entered")
+		roach.input_state.dir = Vector2()
+		for i in 2:
+			yield(get_tree(),"physics_frame")
+		print(roach.global_position)
+		
+		Text.say_array(["Ahora sí gato decime."],"roach")
+		
+		Text.say_array(["Que esta es mi casa y te tenés que ir."])
+		Text.say_array(["Las pelotas amigo, este baño es mío ahora y voy a hacer joda, ya compré el escabio. Así que tocá."],"roach")
+		
+		Text.say_array(["Me parece que no entendiste, si no te vas te mato."])
+		Text.say_array(["Yo te mato a vos amigo"],"roach")
+		yield(Text,"done_with_all_text")
+		Text.can_skip = false
+		Text.say_array(["No yo a vos amigo"])
+		Text.say_array(["No yo a vos amigo"],"roach")
+		yield(get_tree().create_timer(0.7),"timeout")
+		Text.skip()
+		Text.skip()
+		Text.can_skip = true
+		Text.say_array(["Bueno sabés qué, yo te avisé"])
+		yield(Text,"finished")
+		intro.stop()
+		
 	
-	Text.say_array(["Vos estás tapándole la entrada al baño a mi mujer?"])
-	intro.play()
-	yield(Text,"finished")
-	
-	yield(get_tree().create_timer(0.5),"timeout")
-	roach.facing_dir = -1.0
-	yield(get_tree().create_timer(0.5),"timeout")
-	
-	
-	Text.say_array(["Sí gato cuál hay"],"roach")
-	Text.say_array(["Que es mi casa y te tenés que ir."])
-	
-	Text.say_array(["Perdón no te escuché."],"roach")
-	Text.say_array(["Es mi casa y te tenés que ir."])
-	
-	yield(Text,"finished")
-	
-	roach.input_state.dir = Vector2.LEFT
-	yield(roach_detect,"body_entered")
-	roach.input_state.dir = Vector2()
-	for i in 2:
-		yield(get_tree(),"physics_frame")
-	
-	
-	Text.say_array(["Ahora sí gato decime."],"roach")
-	
-	Text.say_array(["Que esta es mi casa y te tenés que ir."])
-	Text.say_array(["Las pelotas amigo, este baño es mío ahora y voy a hacer joda, ya compré el escabio. Así que tocá."],"roach")
-	
-	Text.say_array(["Me parece que no entendiste, si no te vas te mato."])
-	Text.say_array(["Yo te mato a vos amigo"],"roach")
-	yield(Text,"done_with_all_text")
-	Text.can_skip = false
-	Text.say_array(["No yo a vos amigo"])
-	Text.say_array(["No yo a vos amigo"],"roach")
-	yield(get_tree().create_timer(0.7),"timeout")
-	Text.skip()
-	Text.skip()
-	Text.can_skip = true
-	Text.say_array(["Bueno sabés qué, yo te avisé"])
-	yield(Text,"finished")
-	intro.stop()
+	#fight
 	fight.play()
 	roach_controller.disabled = false
 	input_controller.disabled = false
@@ -92,6 +106,12 @@ func _ready() -> void:
 	
 	yield(roach,"die")
 	fight.stop()
+	yield(get_tree().create_timer(0.2),"timeout")
+	
+	
+	if !is_instance_valid(player) or player.dead:
+		return
+	
 	while !roach.is_on_floor() or roach.velocity.y != 0.0 or !player.is_on_floor():
 		yield(get_tree(),"physics_frame")
 	
@@ -118,6 +138,8 @@ func _ready() -> void:
 #	Text.say_array(["Sí perdón"],"roach")
 
 # VERSION 2
+	if !is_instance_valid(player) or player.dead:
+		return
 	Text.say_array(["Ay auchi aw nooo me muero"],"roach")
 	Text.say_array(["Estabas avisado hermano"])
 	yield(Text,"done_with_all_text")
@@ -190,6 +212,8 @@ func _input(event: InputEvent) -> void:
 		var k :InputEventKey = event
 		if k.scancode == KEY_W:
 			roach.die()
+		if k.scancode == KEY_K:
+			player.die()
 func play_for(song,time):
 	if !song.playing:
 		song.play()
@@ -198,3 +222,4 @@ func play_for(song,time):
 
 func _on_player_hurt():
 	player_hurt = true
+

@@ -13,6 +13,9 @@ onready var music_start_timer: Timer = $"%music_start_timer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
+	
+	
 	player.hide()
 	GlobalPalette.reload()
 	fade_out.fade_in(true, 0.25)
@@ -47,4 +50,5 @@ func _ready() -> void:
 	player.hide()
 	fade_out.fade_out(false, 0.25)
 	yield(fade_out,"finished_fade_out")
+	Global.skip_roach_intro = false
 	get_tree().change_scene("res://src/roach_sequence/roach_fight.tscn")

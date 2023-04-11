@@ -173,6 +173,7 @@ MenuStack="*res://src/menu/Menu.tscn"
 LocaleMenu="*res://src/menu/LocaleMenu.tscn"
 PauseMenu="*res://src/menu/PauseMenu/PauseMenu.tscn"
 AchievementsMenu="*res://src/menu/AchievementsMenu/AchievementsMenu.tscn"
+ChooseGunMenu="*res://src/roach_sequence/choose_gun.tscn"
 
 [display]
 

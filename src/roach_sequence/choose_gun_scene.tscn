@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/roach_sequence/choose_gun_scene.gd" type="Script" id=1]
+[ext_resource path="res://src/map/fade_in.gd" type="Script" id=2]
+
+[node name="choose_gun" type="Node"]
+script = ExtResource( 1 )
+
+[node name="fade_out" type="Node" parent="."]
+pause_mode = 2
+unique_name_in_owner = true
+script = ExtResource( 2 )
+delay_obj_bg = 0.0
+fade_in_step_time = 0.5
+fade_out_step_time = 0.75
+fade_level = 3

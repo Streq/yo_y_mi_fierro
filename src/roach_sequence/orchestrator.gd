@@ -203,7 +203,7 @@ func _ready() -> void:
 
 func restart():
 	yield(get_tree().create_timer(3.0),"timeout")
-	get_tree().reload_current_scene()
+	get_tree().change_scene("res://src/roach_sequence/choose_gun_scene.tscn")
 
 func _input(event: InputEvent) -> void:
 	if !OS.is_debug_build():

@@ -1,0 +1,358 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=1]
+[ext_resource path="res://assets/theme/default.tres" type="Theme" id=2]
+[ext_resource path="res://assets/aseprite/mockup/living_room_art.png" type="Texture" id=3]
+[ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/texture/pickup/uzi_pickup.png" type="Texture" id=5]
+[ext_resource path="res://assets/texture/pickup_panel.png" type="Texture" id=6]
+[ext_resource path="res://assets/texture/pickup/burst_pickup.png" type="Texture" id=7]
+[ext_resource path="res://assets/texture/pickup/shotgun_pickup.png" type="Texture" id=8]
+[ext_resource path="res://assets/texture/pickup/sniper_pickup.png" type="Texture" id=9]
+[ext_resource path="res://assets/texture/pickup/gun_pickup.png" type="Texture" id=10]
+[ext_resource path="res://src/roach_sequence/choose_gun.gd" type="Script" id=11]
+[ext_resource path="res://assets/texture/down_arrow.png" type="Texture" id=12]
+[ext_resource path="res://assets/aseprite/mockup/living_room_light.png" type="Texture" id=13]
+[ext_resource path="res://assets/aseprite/mockup/living_room_furniture.png" type="Texture" id=14]
+[ext_resource path="res://assets/aseprite/mockup/living_room.png" type="Texture" id=15]
+[ext_resource path="res://assets/aseprite/mockup/living_room_windows.png" type="Texture" id=16]
+
+[sub_resource type="Image" id=545]
+data = {
+"data": PoolByteArray( 246, 231, 213, 255, 255, 222, 145, 255, 94, 84, 56, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=538]
+flags = 0
+flags = 0
+image = SubResource( 545 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=507]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 538 )
+
+[sub_resource type="Image" id=546]
+data = {
+"data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=540]
+flags = 0
+flags = 0
+image = SubResource( 546 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=504]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0.0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 540 )
+
+[sub_resource type="Image" id=547]
+data = {
+"data": PoolByteArray( 240, 188, 60, 255, 71, 58, 0, 255, 41, 28, 0, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=542]
+flags = 0
+flags = 0
+image = SubResource( 547 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=510]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 542 )
+
+[sub_resource type="Image" id=548]
+data = {
+"data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=544]
+flags = 0
+flags = 0
+image = SubResource( 548 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=513]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 544 )
+
+[sub_resource type="Image" id=549]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=532]
+flags = 0
+flags = 0
+image = SubResource( 549 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=523]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 532 )
+
+[sub_resource type="Image" id=550]
+data = {
+"data": PoolByteArray( 255, 255, 255, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 255, 255, 255 ),
+"format": "RGBA8",
+"height": 1,
+"mipmaps": false,
+"width": 4
+}
+
+[sub_resource type="ImageTexture" id=535]
+flags = 0
+flags = 0
+image = SubResource( 550 )
+size = Vector2( 4, 1 )
+
+[sub_resource type="ShaderMaterial" id=536]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/palette_size = 4
+shader_param/offset = 0
+shader_param/blue_index_offset = 0.0
+shader_param/palette = SubResource( 535 )
+
+[node name="choose_gun" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 11 )
+
+[node name="facade" type="Node2D" parent="."]
+visible = false
+
+[node name="facade" type="Sprite" parent="facade"]
+material = SubResource( 507 )
+texture = ExtResource( 15 )
+centered = false
+
+[node name="palette_client" parent="facade/facade" instance=ExtResource( 4 )]
+index = 10
+
+[node name="light" type="Sprite" parent="facade"]
+material = SubResource( 504 )
+texture = ExtResource( 13 )
+centered = false
+
+[node name="palette_client" parent="facade/light" instance=ExtResource( 4 )]
+index = 2
+
+[node name="furniture" type="Sprite" parent="facade"]
+material = SubResource( 510 )
+texture = ExtResource( 14 )
+centered = false
+
+[node name="palette_client" parent="facade/furniture" instance=ExtResource( 4 )]
+index = 5
+
+[node name="windows" type="Sprite" parent="facade"]
+material = SubResource( 513 )
+texture = ExtResource( 16 )
+centered = false
+
+[node name="palette_client" parent="facade/windows" instance=ExtResource( 4 )]
+index = 3
+
+[node name="art" type="Sprite" parent="facade"]
+material = SubResource( 510 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="palette_client" parent="facade/art" instance=ExtResource( 4 )]
+index = 5
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="continue" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -221.0
+margin_bottom = -213.0
+grow_horizontal = 2
+theme = ExtResource( 2 )
+text = "Try a different gun?"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="guns" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -48.0
+margin_top = -8.0
+margin_right = 48.0
+margin_bottom = 8.0
+
+[node name="gun" type="ReferenceRect" parent="guns"]
+margin_right = 16.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+focus_mode = 2
+
+[node name="Sprite" type="Sprite" parent="guns/gun"]
+material = SubResource( 523 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 10 )
+
+[node name="palette_client" parent="guns/gun/Sprite" instance=ExtResource( 4 )]
+type = 1
+
+[node name="Sprite" type="Sprite" parent="guns/gun/Sprite"]
+show_behind_parent = true
+material = SubResource( 536 )
+texture = ExtResource( 6 )
+
+[node name="palette_client" parent="guns/gun/Sprite/Sprite" instance=ExtResource( 4 )]
+type = 1
+index = 7
+
+[node name="uzi" type="ReferenceRect" parent="guns"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+focus_mode = 2
+
+[node name="Sprite" type="Sprite" parent="guns/uzi"]
+material = SubResource( 523 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 5 )
+
+[node name="palette_client" parent="guns/uzi/Sprite" instance=ExtResource( 4 )]
+type = 1
+
+[node name="Sprite" type="Sprite" parent="guns/uzi/Sprite"]
+show_behind_parent = true
+material = SubResource( 536 )
+texture = ExtResource( 6 )
+
+[node name="palette_client" parent="guns/uzi/Sprite/Sprite" instance=ExtResource( 4 )]
+type = 1
+index = 7
+
+[node name="burst" type="ReferenceRect" parent="guns"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+focus_mode = 2
+
+[node name="Sprite" type="Sprite" parent="guns/burst"]
+material = SubResource( 523 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 7 )
+
+[node name="palette_client" parent="guns/burst/Sprite" instance=ExtResource( 4 )]
+type = 1
+
+[node name="Sprite" type="Sprite" parent="guns/burst/Sprite"]
+show_behind_parent = true
+material = SubResource( 536 )
+texture = ExtResource( 6 )
+
+[node name="palette_client" parent="guns/burst/Sprite/Sprite" instance=ExtResource( 4 )]
+type = 1
+index = 7
+
+[node name="selected_arrow" type="Node2D" parent="guns/burst"]
+unique_name_in_owner = true
+
+[node name="sprite" type="Sprite" parent="guns/burst/selected_arrow"]
+position = Vector2( 8, -9 )
+texture = ExtResource( 12 )
+
+[node name="shotgun" type="ReferenceRect" parent="guns"]
+margin_left = 60.0
+margin_right = 76.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+focus_mode = 2
+
+[node name="Sprite" type="Sprite" parent="guns/shotgun"]
+material = SubResource( 523 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 8 )
+
+[node name="palette_client" parent="guns/shotgun/Sprite" instance=ExtResource( 4 )]
+type = 1
+
+[node name="Sprite" type="Sprite" parent="guns/shotgun/Sprite"]
+show_behind_parent = true
+material = SubResource( 536 )
+texture = ExtResource( 6 )
+
+[node name="palette_client" parent="guns/shotgun/Sprite/Sprite" instance=ExtResource( 4 )]
+type = 1
+index = 7
+
+[node name="sniper" type="ReferenceRect" parent="guns"]
+margin_left = 80.0
+margin_right = 96.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 16, 16 )
+focus_mode = 2
+
+[node name="Sprite" type="Sprite" parent="guns/sniper"]
+material = SubResource( 523 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 9 )
+
+[node name="palette_client" parent="guns/sniper/Sprite" instance=ExtResource( 4 )]
+type = 1
+
+[node name="Sprite" type="Sprite" parent="guns/sniper/Sprite"]
+show_behind_parent = true
+material = SubResource( 536 )
+texture = ExtResource( 6 )
+
+[node name="palette_client" parent="guns/sniper/Sprite/Sprite" instance=ExtResource( 4 )]
+type = 1
+index = 7

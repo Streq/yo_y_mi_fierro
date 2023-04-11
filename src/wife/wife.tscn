@@ -4,7 +4,7 @@
 [ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/texture/wife.png" type="Texture" id=4]
 
-[sub_resource type="Image" id=524]
+[sub_resource type="Image" id=533]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -13,10 +13,10 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=522]
+[sub_resource type="ImageTexture" id=532]
 flags = 0
 flags = 0
-image = SubResource( 524 )
+image = SubResource( 533 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=523]
@@ -25,7 +25,7 @@ shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 522 )
+shader_param/palette = SubResource( 532 )
 
 [node name="Sprite" type="Sprite"]
 material = SubResource( 523 )

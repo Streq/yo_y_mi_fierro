@@ -14,3 +14,8 @@ delay_obj_bg = 0.0
 fade_in_step_time = 0.5
 fade_out_step_time = 0.75
 fade_level = 3
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )

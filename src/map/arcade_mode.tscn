@@ -55,7 +55,7 @@
 [ext_resource path="res://assets/texture/dark_gray_square.png" type="Texture" id=53]
 [ext_resource path="res://assets/texture/dither50gray.png" type="Texture" id=54]
 
-[sub_resource type="Image" id=545]
+[sub_resource type="Image" id=498]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -64,19 +64,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=544]
+[sub_resource type="ImageTexture" id=474]
 flags = 0
 flags = 0
-image = SubResource( 545 )
+image = SubResource( 498 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=513]
+[sub_resource type="ShaderMaterial" id=475]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 544 )
+shader_param/palette = SubResource( 474 )
 
 [sub_resource type="RectangleShape2D" id=57]
 extents = Vector2( 8, 336 )
@@ -88,7 +88,7 @@ extents = Vector2( 7.99944, 368 )
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="Image" id=546]
+[sub_resource type="Image" id=499]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -97,21 +97,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=515]
+[sub_resource type="ImageTexture" id=487]
 flags = 0
 flags = 0
-image = SubResource( 546 )
+image = SubResource( 499 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=516]
+[sub_resource type="ShaderMaterial" id=488]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 515 )
+shader_param/palette = SubResource( 487 )
 
-[sub_resource type="Image" id=547]
+[sub_resource type="Image" id=500]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -120,21 +120,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=519]
+[sub_resource type="ImageTexture" id=490]
 flags = 0
 flags = 0
-image = SubResource( 547 )
+image = SubResource( 500 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=520]
+[sub_resource type="ShaderMaterial" id=491]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 519 )
+shader_param/palette = SubResource( 490 )
 
-[sub_resource type="Image" id=548]
+[sub_resource type="Image" id=501]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -146,7 +146,7 @@ data = {
 [sub_resource type="ImageTexture" id=406]
 flags = 0
 flags = 0
-image = SubResource( 548 )
+image = SubResource( 501 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=96]
@@ -157,7 +157,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 406 )
 
-[sub_resource type="Image" id=549]
+[sub_resource type="Image" id=502]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -166,21 +166,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=532]
+[sub_resource type="ImageTexture" id=483]
 flags = 0
 flags = 0
-image = SubResource( 549 )
+image = SubResource( 502 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=523]
+[sub_resource type="ShaderMaterial" id=484]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 532 )
+shader_param/palette = SubResource( 483 )
 
-[sub_resource type="Image" id=550]
+[sub_resource type="Image" id=503]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255 ),
 "format": "RGBA8",
@@ -189,21 +189,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=539]
+[sub_resource type="ImageTexture" id=495]
 flags = 0
 flags = 0
-image = SubResource( 550 )
+image = SubResource( 503 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=540]
+[sub_resource type="ShaderMaterial" id=496]
 resource_local_to_scene = true
 shader = ExtResource( 2 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 539 )
+shader_param/palette = SubResource( 495 )
 
-[sub_resource type="AtlasTexture" id=474]
+[sub_resource type="AtlasTexture" id=497]
 flags = 2
 atlas = ExtResource( 54 )
 region = Rect2( 0, 0, 160, 8 )
@@ -212,7 +212,7 @@ region = Rect2( 0, 0, 160, 8 )
 atlas = ExtResource( 53 )
 region = Rect2( 0, 0, 160, 8 )
 
-[sub_resource type="Image" id=551]
+[sub_resource type="Image" id=504]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 117, 255, 0, 255, 8, 121, 38, 255, 0, 83, 48, 255 ),
 "format": "RGBA8",
@@ -224,7 +224,7 @@ data = {
 [sub_resource type="ImageTexture" id=440]
 flags = 0
 flags = 0
-image = SubResource( 551 )
+image = SubResource( 504 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=243]
@@ -532,7 +532,7 @@ layer = -1
 [node name="Sprite" type="TextureRect" parent="CanvasLayer"]
 visible = false
 modulate = Color( 0, 0, 0, 1 )
-material = SubResource( 513 )
+material = SubResource( 475 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 10 )
@@ -745,7 +745,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/intro/intro_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 264.0
@@ -797,7 +797,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/intro/consigna_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 264.0
@@ -820,7 +820,7 @@ wait_time = 3.0
 
 [node name="howtoplay" type="TextureRect" parent="CanvasLayer2"]
 unique_name_in_owner = true
-material = SubResource( 520 )
+material = SubResource( 491 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -865,7 +865,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 40.0
@@ -910,7 +910,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label2/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 48.0
@@ -955,7 +955,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/howtoplay/intro_label3/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 48.0
@@ -1005,7 +1005,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/win_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 248.0
@@ -1058,7 +1058,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="CanvasLayer2/lose_label/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 248.0
@@ -1104,7 +1104,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer2/HBoxContainer"]
-material = SubResource( 520 )
+material = SubResource( 491 )
 margin_left = 36.0
 margin_right = 52.0
 margin_bottom = 16.0
@@ -1113,7 +1113,7 @@ texture = ExtResource( 8 )
 [node name="palette_client" parent="CanvasLayer2/HBoxContainer/TextureRect" instance=ExtResource( 1 )]
 
 [node name="weapon_texture" type="TextureRect" parent="CanvasLayer2/HBoxContainer/TextureRect"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 texture = ExtResource( 16 )
@@ -1125,14 +1125,14 @@ script = ExtResource( 33 )
 type = 1
 
 [node name="shield_bar" type="TextureProgress" parent="CanvasLayer2"]
-material = SubResource( 540 )
+material = SubResource( 496 )
 margin_left = 8.0
 margin_top = 25.0
 margin_right = 168.0
 margin_bottom = 41.0
 step = 0.0
 value = 100.0
-texture_under = SubResource( 474 )
+texture_under = SubResource( 497 )
 texture_progress = SubResource( 451 )
 script = ExtResource( 52 )
 player_path = NodePath("../../soldier")
@@ -1363,7 +1363,7 @@ custom_constants/margin_bottom = -8
 
 [node name="fade_rect" type="TextureRect" parent="intro_label4/MarginContainer"]
 show_behind_parent = true
-material = SubResource( 516 )
+material = SubResource( 488 )
 margin_left = -8.0
 margin_top = -8.0
 margin_right = 88.0

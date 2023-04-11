@@ -19,7 +19,7 @@ func focus_gun(gun):
 	selected_gun = gun
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("A"):
+	if event.is_action_pressed("B"):
 		Global.weapon = selected_gun.name
 		MenuStack.pop()
 

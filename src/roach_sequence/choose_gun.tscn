@@ -17,7 +17,7 @@
 [ext_resource path="res://assets/aseprite/mockup/living_room.png" type="Texture" id=15]
 [ext_resource path="res://assets/aseprite/mockup/living_room_windows.png" type="Texture" id=16]
 
-[sub_resource type="Image" id=545]
+[sub_resource type="Image" id=514]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 255, 222, 145, 255, 94, 84, 56, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -26,21 +26,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=538]
+[sub_resource type="ImageTexture" id=504]
 flags = 0
 flags = 0
-image = SubResource( 545 )
+image = SubResource( 514 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=507]
+[sub_resource type="ShaderMaterial" id=505]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 538 )
+shader_param/palette = SubResource( 504 )
 
-[sub_resource type="Image" id=546]
+[sub_resource type="Image" id=515]
 data = {
 "data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -49,21 +49,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=540]
+[sub_resource type="ImageTexture" id=465]
 flags = 0
 flags = 0
-image = SubResource( 546 )
+image = SubResource( 515 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=504]
+[sub_resource type="ShaderMaterial" id=466]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0.0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 540 )
+shader_param/palette = SubResource( 465 )
 
-[sub_resource type="Image" id=547]
+[sub_resource type="Image" id=516]
 data = {
 "data": PoolByteArray( 240, 188, 60, 255, 71, 58, 0, 255, 41, 28, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -72,21 +72,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=542]
+[sub_resource type="ImageTexture" id=477]
 flags = 0
 flags = 0
-image = SubResource( 547 )
+image = SubResource( 516 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=510]
+[sub_resource type="ShaderMaterial" id=478]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 542 )
+shader_param/palette = SubResource( 477 )
 
-[sub_resource type="Image" id=548]
+[sub_resource type="Image" id=517]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -95,21 +95,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=544]
+[sub_resource type="ImageTexture" id=474]
 flags = 0
 flags = 0
-image = SubResource( 548 )
+image = SubResource( 517 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=513]
+[sub_resource type="ShaderMaterial" id=475]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 544 )
+shader_param/palette = SubResource( 474 )
 
-[sub_resource type="Image" id=549]
+[sub_resource type="Image" id=518]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -118,21 +118,21 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=532]
+[sub_resource type="ImageTexture" id=483]
 flags = 0
 flags = 0
-image = SubResource( 549 )
+image = SubResource( 518 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=523]
+[sub_resource type="ShaderMaterial" id=484]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 532 )
+shader_param/palette = SubResource( 483 )
 
-[sub_resource type="Image" id=550]
+[sub_resource type="Image" id=519]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 0, 0, 255, 255, 255, 0, 255, 255, 255, 255, 255 ),
 "format": "RGBA8",
@@ -141,19 +141,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=535]
+[sub_resource type="ImageTexture" id=512]
 flags = 0
 flags = 0
-image = SubResource( 550 )
+image = SubResource( 519 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=536]
+[sub_resource type="ShaderMaterial" id=513]
 resource_local_to_scene = true
 shader = ExtResource( 1 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 535 )
+shader_param/palette = SubResource( 512 )
 
 [node name="choose_gun" type="CanvasLayer"]
 pause_mode = 2
@@ -163,7 +163,7 @@ script = ExtResource( 11 )
 visible = false
 
 [node name="facade" type="Sprite" parent="facade"]
-material = SubResource( 507 )
+material = SubResource( 505 )
 texture = ExtResource( 15 )
 centered = false
 
@@ -171,7 +171,7 @@ centered = false
 index = 10
 
 [node name="light" type="Sprite" parent="facade"]
-material = SubResource( 504 )
+material = SubResource( 466 )
 texture = ExtResource( 13 )
 centered = false
 
@@ -179,7 +179,7 @@ centered = false
 index = 2
 
 [node name="furniture" type="Sprite" parent="facade"]
-material = SubResource( 510 )
+material = SubResource( 478 )
 texture = ExtResource( 14 )
 centered = false
 
@@ -187,7 +187,7 @@ centered = false
 index = 5
 
 [node name="windows" type="Sprite" parent="facade"]
-material = SubResource( 513 )
+material = SubResource( 475 )
 texture = ExtResource( 16 )
 centered = false
 
@@ -195,7 +195,7 @@ centered = false
 index = 3
 
 [node name="art" type="Sprite" parent="facade"]
-material = SubResource( 510 )
+material = SubResource( 478 )
 texture = ExtResource( 3 )
 centered = false
 
@@ -203,6 +203,7 @@ centered = false
 index = 5
 
 [node name="ColorRect" type="ColorRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
@@ -238,7 +239,7 @@ rect_min_size = Vector2( 16, 16 )
 focus_mode = 2
 
 [node name="Sprite" type="Sprite" parent="guns/gun"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 position = Vector2( 8, 8 )
 texture = ExtResource( 10 )
 
@@ -247,7 +248,7 @@ type = 1
 
 [node name="Sprite" type="Sprite" parent="guns/gun/Sprite"]
 show_behind_parent = true
-material = SubResource( 536 )
+material = SubResource( 513 )
 texture = ExtResource( 6 )
 
 [node name="palette_client" parent="guns/gun/Sprite/Sprite" instance=ExtResource( 4 )]
@@ -262,7 +263,7 @@ rect_min_size = Vector2( 16, 16 )
 focus_mode = 2
 
 [node name="Sprite" type="Sprite" parent="guns/uzi"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 position = Vector2( 8, 8 )
 texture = ExtResource( 5 )
 
@@ -271,7 +272,7 @@ type = 1
 
 [node name="Sprite" type="Sprite" parent="guns/uzi/Sprite"]
 show_behind_parent = true
-material = SubResource( 536 )
+material = SubResource( 513 )
 texture = ExtResource( 6 )
 
 [node name="palette_client" parent="guns/uzi/Sprite/Sprite" instance=ExtResource( 4 )]
@@ -286,7 +287,7 @@ rect_min_size = Vector2( 16, 16 )
 focus_mode = 2
 
 [node name="Sprite" type="Sprite" parent="guns/burst"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 position = Vector2( 8, 8 )
 texture = ExtResource( 7 )
 
@@ -295,7 +296,7 @@ type = 1
 
 [node name="Sprite" type="Sprite" parent="guns/burst/Sprite"]
 show_behind_parent = true
-material = SubResource( 536 )
+material = SubResource( 513 )
 texture = ExtResource( 6 )
 
 [node name="palette_client" parent="guns/burst/Sprite/Sprite" instance=ExtResource( 4 )]
@@ -317,7 +318,7 @@ rect_min_size = Vector2( 16, 16 )
 focus_mode = 2
 
 [node name="Sprite" type="Sprite" parent="guns/shotgun"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 position = Vector2( 8, 8 )
 texture = ExtResource( 8 )
 
@@ -326,7 +327,7 @@ type = 1
 
 [node name="Sprite" type="Sprite" parent="guns/shotgun/Sprite"]
 show_behind_parent = true
-material = SubResource( 536 )
+material = SubResource( 513 )
 texture = ExtResource( 6 )
 
 [node name="palette_client" parent="guns/shotgun/Sprite/Sprite" instance=ExtResource( 4 )]
@@ -341,7 +342,7 @@ rect_min_size = Vector2( 16, 16 )
 focus_mode = 2
 
 [node name="Sprite" type="Sprite" parent="guns/sniper"]
-material = SubResource( 523 )
+material = SubResource( 484 )
 position = Vector2( 8, 8 )
 texture = ExtResource( 9 )
 
@@ -350,7 +351,7 @@ type = 1
 
 [node name="Sprite" type="Sprite" parent="guns/sniper/Sprite"]
 show_behind_parent = true
-material = SubResource( 536 )
+material = SubResource( 513 )
 texture = ExtResource( 6 )
 
 [node name="palette_client" parent="guns/sniper/Sprite/Sprite" instance=ExtResource( 4 )]

@@ -18,6 +18,8 @@ onready var intro: AudioStreamPlayer = $"%intro"
 onready var fight: AudioStreamPlayer = $"%fight"
 
 var player_hurt = false
+onready var set_gun_from_global: Node = $"%set_gun_from_global"
+onready var starting_weapon: Node2D = $"%starting_weapon"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -33,6 +35,13 @@ func _ready() -> void:
 		fade_out.fade_in(false, 0.0)
 		roach.global_position = Vector2(156,238)
 		player.global_position = Vector2(119,252)
+		fight.play()
+		yield(fade_out,"finished_fade_in")
+		MenuStack.push(ChooseGunMenu)
+		yield(MenuStack,"empty")
+		set_gun_from_global.refresh()
+		starting_weapon.drop()
+		
 	#intro
 	if !Global.skip_roach_intro:
 		Global.skip_roach_intro = true
@@ -94,11 +103,16 @@ func _ready() -> void:
 		Text.can_skip = true
 		Text.say_array(["Bueno sabés qué, yo te avisé"])
 		yield(Text,"finished")
-		intro.stop()
 		
+		intro.stop()
+		fight.play()
+		
+		MenuStack.push(ChooseGunMenu)
+		yield(MenuStack,"empty")
+		set_gun_from_global.refresh()
+		starting_weapon.drop()
 	
 	#fight
-	fight.play()
 	roach_controller.disabled = false
 	input_controller.disabled = false
 	
@@ -203,7 +217,7 @@ func _ready() -> void:
 
 func restart():
 	yield(get_tree().create_timer(3.0),"timeout")
-	get_tree().change_scene("res://src/roach_sequence/choose_gun_scene.tscn")
+	get_tree().reload_current_scene()
 
 func _input(event: InputEvent) -> void:
 	if !OS.is_debug_build():

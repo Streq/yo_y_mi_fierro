@@ -51,4 +51,4 @@ func _ready() -> void:
 	fade_out.fade_out(false, 0.25)
 	yield(fade_out,"finished_fade_out")
 	Global.skip_roach_intro = false
-	get_tree().change_scene("res://src/roach_sequence/choose_gun_scene.tscn")
+	get_tree().change_scene("res://src/roach_sequence/roach_fight.tscn")

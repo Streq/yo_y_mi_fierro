@@ -231,6 +231,7 @@ margin_right = 360.0
 text = "Delete Progress (hold pressed for 2 seconds)"
 
 [node name="progress" type="ProgressBar" parent="PanelContainer/VBoxContainer/options/delete_progress/menu_entry/label" index="0"]
+unique_name_in_owner = true
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0

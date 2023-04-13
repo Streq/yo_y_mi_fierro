@@ -13,7 +13,7 @@ func spawn():
 	var SPAWN_SCENE = spawn_source.get_spawn()
 	if !SPAWN_SCENE:
 		return
-	var entity = SPAWN_SCENE.instance()
+	var entity = SPAWN_SCENE.scene.instance()
 	entity.facing_dir = spawn_point.facing_dir
 	
 	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=2]
@@ -24,7 +24,7 @@
 [ext_resource path="res://src/map/consigna_label.gd" type="Script" id=22]
 [ext_resource path="res://src/shooter/run_forward_jump_mook.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/endless_mode/survive_label.gd" type="Script" id=24]
-[ext_resource path="res://src/map/map.gd" type="Script" id=25]
+[ext_resource path="res://src/endless_mode/endless_mode.gd" type="Script" id=25]
 [ext_resource path="res://src/map/despawn_zone.gd" type="Script" id=26]
 [ext_resource path="res://src/map/decrease_wait_time_with_time.gd" type="Script" id=27]
 [ext_resource path="res://src/map/fade_in.gd" type="Script" id=28]
@@ -50,10 +50,12 @@
 [ext_resource path="res://src/controller/input_controller.tscn" type="PackedScene" id=48]
 [ext_resource path="res://src/map/global_weapon_tracker.gd" type="Script" id=49]
 [ext_resource path="res://assets/aseprite/mockup/howtoplay.png" type="Texture" id=50]
-[ext_resource path="res://src/map/achievement_tracker.gd" type="Script" id=51]
+[ext_resource path="res://src/endless_mode/achievement_tracker.gd" type="Script" id=51]
 [ext_resource path="res://src/map/shield_bar.gd" type="Script" id=52]
+[ext_resource path="res://src/endless_mode/drop_chance.gd" type="Script" id=53]
+[ext_resource path="res://src/endless_mode/global_drop_chances.gd" type="Script" id=54]
 
-[sub_resource type="Image" id=468]
+[sub_resource type="Image" id=477]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -65,7 +67,7 @@ data = {
 [sub_resource type="ImageTexture" id=453]
 flags = 0
 flags = 0
-image = SubResource( 468 )
+image = SubResource( 477 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=454]
@@ -86,7 +88,7 @@ extents = Vector2( 7.99944, 368 )
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="Image" id=469]
+[sub_resource type="Image" id=478]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -98,7 +100,7 @@ data = {
 [sub_resource type="ImageTexture" id=456]
 flags = 0
 flags = 0
-image = SubResource( 469 )
+image = SubResource( 478 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=457]
@@ -109,7 +111,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 456 )
 
-[sub_resource type="Image" id=470]
+[sub_resource type="Image" id=479]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -121,7 +123,7 @@ data = {
 [sub_resource type="ImageTexture" id=459]
 flags = 0
 flags = 0
-image = SubResource( 470 )
+image = SubResource( 479 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=460]
@@ -132,7 +134,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 459 )
 
-[sub_resource type="Image" id=471]
+[sub_resource type="Image" id=480]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -144,7 +146,7 @@ data = {
 [sub_resource type="ImageTexture" id=406]
 flags = 0
 flags = 0
-image = SubResource( 471 )
+image = SubResource( 480 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=96]
@@ -155,7 +157,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 406 )
 
-[sub_resource type="Image" id=472]
+[sub_resource type="Image" id=481]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -167,7 +169,7 @@ data = {
 [sub_resource type="ImageTexture" id=463]
 flags = 0
 flags = 0
-image = SubResource( 472 )
+image = SubResource( 481 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=464]
@@ -178,7 +180,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 463 )
 
-[sub_resource type="Image" id=473]
+[sub_resource type="Image" id=482]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255 ),
 "format": "RGBA8",
@@ -190,7 +192,7 @@ data = {
 [sub_resource type="ImageTexture" id=466]
 flags = 0
 flags = 0
-image = SubResource( 473 )
+image = SubResource( 482 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=467]
@@ -206,7 +208,7 @@ flags = 2
 atlas = ExtResource( 45 )
 region = Rect2( 0, 0, 160, 8 )
 
-[sub_resource type="Image" id=474]
+[sub_resource type="Image" id=483]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 117, 255, 0, 255, 8, 121, 38, 255, 0, 83, 48, 255 ),
 "format": "RGBA8",
@@ -218,7 +220,7 @@ data = {
 [sub_resource type="ImageTexture" id=440]
 flags = 0
 flags = 0
-image = SubResource( 474 )
+image = SubResource( 483 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=243]
@@ -229,7 +231,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 440 )
 
-[sub_resource type="Animation" id=63]
+[sub_resource type="Animation" id=475]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("spawn_source/aim_mook:weight")
@@ -267,10 +269,34 @@ tracks/2/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/3/type = "value"
+tracks/3/path = NodePath("global_drop_chance/health_up:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("global_drop_chance/shield:value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
-[sub_resource type="Animation" id=64]
+[sub_resource type="Animation" id=476]
 resource_name = "play"
-length = 90.0
+length = 360.0
 step = 1.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("spawn_source/jump_mook:weight")
@@ -279,10 +305,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 10, 20, 30, 40, 50, 60, 70, 80 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 10, 20, 30, 40, 50, 60, 70, 80, 90 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 1.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0 ]
+"values": [ 1.0, 2.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("spawn_source/aim_mook:weight")
@@ -291,10 +317,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 10, 20, 30, 40, 50, 60, 70, 80 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 10, 20, 30, 40, 50, 60, 70, 80, 90 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 0.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0 ]
+"values": [ 0.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("spawn_source/mook:weight")
@@ -303,10 +329,34 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 10, 20, 30, 40, 50, 60, 70, 80 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 10, 20, 30, 80, 100, 120, 140, 160, 180 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0, 10.0 ]
+"values": [ 10.0, 10.0, 10.0, 10.0, 9.0, 8.0, 7.0, 6.0, 5.0, 4.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("global_drop_chance/health_up:value")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 90, 100, 110, 120, 130, 140, 280 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.8, 0.6, 0.4, 0.2, 0.1, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("global_drop_chance/shield:value")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 90, 130, 140, 150, 160, 170, 280 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.8, 0.6, 0.4, 0.2, 0.1, 0.0 ]
 }
 
 [sub_resource type="Animation" id=76]
@@ -540,17 +590,19 @@ script = ExtResource( 7 )
 point_source_path = NodePath("../spawn_point_source")
 spawn_source_path = NodePath("../spawn_source")
 
-[node name="Timer" type="Timer" parent="spawner"]
+[node name="spawn_timer" type="Timer" parent="spawner"]
+unique_name_in_owner = true
 process_mode = 0
 wait_time = 2.0
 autostart = true
 
-[node name="decrease_wait_time_with_time" type="Node" parent="spawner/Timer"]
+[node name="decrease_wait_time_with_time" type="Node" parent="spawner/spawn_timer"]
 script = ExtResource( 27 )
 min_time = 0.75
 time_step = 0.166667
 
-[node name="Timer" type="Timer" parent="spawner/Timer/decrease_wait_time_with_time"]
+[node name="decrease_rate_timer" type="Timer" parent="spawner/spawn_timer/decrease_wait_time_with_time"]
+unique_name_in_owner = true
 process_mode = 0
 wait_time = 10.0
 autostart = true
@@ -1037,7 +1089,7 @@ align = 1
 autowrap = true
 percent_visible = 0.0
 script = ExtResource( 21 )
-consignas = [ "NOOOOO ESTABA RECONTRA CERCA EL HELICOPTERO" ]
+consignas = [ "SE HIZO LO QUE SE PUDO" ]
 index_source = NodePath("../intro/consigna_label")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer2/lose_label"]
@@ -1077,7 +1129,7 @@ custom_constants/shadow_offset_x = 1
 custom_constants/line_spacing = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = SubResource( 67 )
-text = "TIEMPO SOBREVIVIDO:"
+text = "TIEMPO SOBREVIVIDO:%d"
 align = 1
 valign = 1
 script = ExtResource( 24 )
@@ -1202,8 +1254,8 @@ anchor_bottom = 1.0
 
 [node name="spawn_odds_change_animation" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
-anims/RESET = SubResource( 63 )
-anims/play = SubResource( 64 )
+anims/RESET = SubResource( 475 )
+anims/play = SubResource( 476 )
 
 [node name="win_anim" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
@@ -1338,14 +1390,24 @@ stretch_mode = 2
 type = 1
 index = 1
 
+[node name="global_drop_chance" type="Node" parent="." groups=["global_drop_chance"]]
+unique_name_in_owner = true
+script = ExtResource( 54 )
+
+[node name="health_up" type="Node" parent="global_drop_chance"]
+script = ExtResource( 53 )
+
+[node name="shield" type="Node" parent="global_drop_chance"]
+script = ExtResource( 53 )
+
 [connection signal="dead_enemies_changed" from="." to="CanvasLayer2/survive_label/dead_enemies" method="update_text"]
 [connection signal="dead_enemies_changed" from="." to="achievement_tracker" method="_on_dead_enemies_changed"]
 [connection signal="spawned_enemies_changed" from="." to="CanvasLayer2/spawned_enemies" method="update_text"]
 [connection signal="win" from="." to="achievement_tracker" method="_on_win"]
 [connection signal="spawn" from="spawner" to="." method="_on_spawner_spawn"]
 [connection signal="spawn" from="spawner" to="achievement_tracker" method="_on_spawner_spawn"]
-[connection signal="timeout" from="spawner/Timer" to="spawner" method="spawn"]
-[connection signal="timeout" from="spawner/Timer/decrease_wait_time_with_time/Timer" to="spawner/Timer/decrease_wait_time_with_time" method="_on_Timer_timeout"]
+[connection signal="timeout" from="spawner/spawn_timer" to="spawner" method="spawn"]
+[connection signal="timeout" from="spawner/spawn_timer/decrease_wait_time_with_time/decrease_rate_timer" to="spawner/spawn_timer/decrease_wait_time_with_time" method="_on_Timer_timeout"]
 [connection signal="die" from="soldier" to="." method="_on_soldier_die"]
 [connection signal="weapon_change" from="soldier" to="CanvasLayer2/HBoxContainer/TextureRect/weapon_texture" method="_on_weapon_change"]
 [connection signal="body_entered" from="despawn_zone" to="despawn_zone" method="_on_despawn_zone_body_entered"]

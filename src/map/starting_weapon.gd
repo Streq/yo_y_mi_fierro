@@ -1,7 +1,6 @@
 extends Node2D
 
 onready var drop_table: Node = $drop_table
-onready var set_gun_from_global: Node = $"%set_gun_from_global"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +18,6 @@ func _unhandled_key_input(event: InputEventKey) -> void:
 func drop():
 	var drop = drop_table.get_spawn()
 	if drop:
-		var instance = drop.instance()
+		var instance = drop.scene.instance()
 		get_parent().call_deferred("add_child",instance)
 		instance.get_node("pickup_sound").volume_db=-100

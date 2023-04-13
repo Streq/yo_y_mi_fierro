@@ -19,11 +19,13 @@ func get_spawn():
 		return null
 	var r = rand_range(0,total_weight)
 #	print(r)
+
+#	for spawn in get_children():
+#		print(spawn.name,":",spawn.weight)
 	for spawn in get_children():
 		if !spawn.weight: 
 #			print("no chance")
 			continue
 		if spawn.weight >= r:
-			return spawn.scene
+			return spawn
 		r -= spawn.weight
-	

@@ -8,9 +8,13 @@ signal completed(achievement)
 signal highscore(value)
 signal highscore_updated()
 
+signal highscore_endless(value)
+signal highscore_endless_updated()
+
 var map = {}
 
 var highscore : int = 0
+var highscore_endless : int = 0
 
 onready var list: Node = $"%list"
 
@@ -47,10 +51,17 @@ func clear():
 	highscore = 0
 	emit_signal("changed")
 	emit_signal("highscore_updated")
+	emit_signal("highscore_endless_updated")
 
 func submit_highscore(score):
 	highscore = max(highscore, score)
 	emit_signal("highscore",score)
 	emit_signal("highscore_updated")
 	emit_signal("changed")
-	
+
+func submit_highscore_endless(score):
+	highscore_endless = max(highscore_endless, score)
+	emit_signal("highscore_endless",score)
+	emit_signal("highscore_endless_updated")
+	emit_signal("changed")
+

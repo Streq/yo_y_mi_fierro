@@ -1,7 +1,6 @@
 extends Node
 tool
 onready var list: Node = $"%list"
-onready var highscores: Node = $"%highscores"
 
 export var id_map = {}
 

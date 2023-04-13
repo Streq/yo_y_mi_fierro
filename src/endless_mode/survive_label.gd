@@ -1,16 +1,11 @@
 extends Label
 
+export var format = "TIEMPO SOBREVIVIDO:%d"
+var time = 0.0
+func _physics_process(delta: float) -> void:
+	time += delta
+	text = tr(format) % time
+onready var soldier: KinematicBody2D = $"%soldier"
 
-# Declare member variables here. Examples:
-# var a: int = 2
-# var b: String = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta: float) -> void:
-#	pass
+	soldier.connect("die",self,"set_physics_process",[false])

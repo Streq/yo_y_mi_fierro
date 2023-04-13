@@ -20,7 +20,7 @@
 [ext_resource path="res://src/pickup/shield.tscn" type="PackedScene" id=18]
 [ext_resource path="res://src/shooter/shield_pickup.gd" type="Script" id=19]
 
-[sub_resource type="Image" id=468]
+[sub_resource type="Image" id=508]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 57, 189, 24, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -29,19 +29,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=29]
+[sub_resource type="ImageTexture" id=506]
 flags = 0
 flags = 0
-image = SubResource( 468 )
+image = SubResource( 508 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=30]
+[sub_resource type="ShaderMaterial" id=507]
 resource_local_to_scene = true
 shader = ExtResource( 15 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 29 )
+shader_param/palette = SubResource( 506 )
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 317, 20 )
@@ -410,7 +410,7 @@ tracks/4/keys = {
 "values": [ 1.0, 2.0 ]
 }
 
-[sub_resource type="Image" id=469]
+[sub_resource type="Image" id=509]
 data = {
 "data": PoolByteArray( 149, 255, 0, 255, 0, 87, 0, 255, 64, 44, 0, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -419,26 +419,26 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=32]
+[sub_resource type="ImageTexture" id=503]
 flags = 0
 flags = 0
-image = SubResource( 469 )
+image = SubResource( 509 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=467]
+[sub_resource type="ShaderMaterial" id=504]
 resource_local_to_scene = true
 shader = ExtResource( 15 )
 shader_param/palette_size = 4
 shader_param/offset = 0.0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 32 )
+shader_param/palette = SubResource( 503 )
 
 [node name="mook" instance=ExtResource( 1 )]
 team = 1
 init_health_max = 1.0
 
 [node name="Sprite" parent="pivot" index="0"]
-material = SubResource( 30 )
+material = SubResource( 507 )
 
 [node name="palette_client" parent="pivot/Sprite" index="2"]
 index = 2
@@ -490,7 +490,7 @@ anims/idle = SubResource( 21 )
 anims/run = SubResource( 22 )
 
 [node name="hud_bar" parent="." index="7"]
-material = SubResource( 467 )
+material = SubResource( 504 )
 
 [node name="basic_mook_controller" type="Node" parent="." index="9"]
 process_priority = -10

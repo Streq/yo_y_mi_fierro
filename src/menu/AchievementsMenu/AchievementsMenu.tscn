@@ -35,7 +35,7 @@ pause_mode = 2
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 369.0
-margin_bottom = 189.0
+margin_bottom = 201.0
 
 [node name="title" type="Label" parent="PanelContainer/VBoxContainer"]
 margin_right = 368.0
@@ -55,11 +55,24 @@ align = 1
 valign = 1
 script = ExtResource( 9 )
 
-[node name="options" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
-unique_name_in_owner = true
+[node name="highscore_endless" type="Label" parent="PanelContainer/VBoxContainer"]
 margin_top = 48.0
 margin_right = 368.0
-margin_bottom = 188.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 0, 8 )
+text = "HIGHSCORE:%d"
+align = 1
+valign = 1
+script = ExtResource( 9 )
+format = "ENDLESS MODE HIGHSCORE:%d"
+trigger_signal = "highscore_endless_updated"
+highscore_name = "highscore_endless"
+
+[node name="options" type="VBoxContainer" parent="PanelContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 60.0
+margin_right = 368.0
+margin_bottom = 200.0
 
 [node name="CenterContainer" type="CenterContainer" parent="PanelContainer/VBoxContainer/options"]
 margin_right = 368.0

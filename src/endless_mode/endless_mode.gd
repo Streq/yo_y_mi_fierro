@@ -24,6 +24,7 @@ func lose():
 	if is_instance_valid(consigna_label):
 		consigna_label.visible = false
 	lose_anim.play("play")
+	Achievements.submit_highscore_endless(score)
 	yield(lose_anim,"animation_finished")
 	Exit.lose()
 	pass
@@ -63,3 +64,7 @@ func _on_spawner_spawn(who) -> void:
 func set_score(new_score):
 	score = new_score
 	emit_signal("score_changed",score)
+
+func _physics_process(delta: float) -> void:
+	if !outcome_decided:
+		set_score(score + 1)

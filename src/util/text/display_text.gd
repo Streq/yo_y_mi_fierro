@@ -29,7 +29,8 @@ func display(amount:=-1):
 		tween.tween_callback(self, "show_one_more_character")
 		tween.tween_interval(time_per_char_in_seconds)
 	tween.tween_callback(self, "show_one_more_character")
-	tween.tween_callback(self, "show_all_characters")
+	if amount == -1 or amount == StringUtils.count_printable_characters(label.text):
+		tween.tween_callback(self, "show_all_characters")
 	tween.tween_callback(self,"emit_signal",["finished"])
 
 func undisplay():

@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=2]
+[gd_scene load_steps=92 format=2]
 
 [ext_resource path="res://src/util/color/palette_client.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/shader/palette.gdshader" type="Shader" id=2]
@@ -55,7 +55,7 @@
 [ext_resource path="res://src/endless_mode/drop_chance.gd" type="Script" id=53]
 [ext_resource path="res://src/endless_mode/global_drop_chances.gd" type="Script" id=54]
 
-[sub_resource type="Image" id=477]
+[sub_resource type="Image" id=485]
 data = {
 "data": PoolByteArray( 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -67,7 +67,7 @@ data = {
 [sub_resource type="ImageTexture" id=453]
 flags = 0
 flags = 0
-image = SubResource( 477 )
+image = SubResource( 485 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=454]
@@ -88,7 +88,7 @@ extents = Vector2( 7.99944, 368 )
 size = 8
 font_data = ExtResource( 4 )
 
-[sub_resource type="Image" id=478]
+[sub_resource type="Image" id=486]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 78, 74, 255, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -100,7 +100,7 @@ data = {
 [sub_resource type="ImageTexture" id=456]
 flags = 0
 flags = 0
-image = SubResource( 478 )
+image = SubResource( 486 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=457]
@@ -111,7 +111,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 456 )
 
-[sub_resource type="Image" id=479]
+[sub_resource type="Image" id=487]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -123,7 +123,7 @@ data = {
 [sub_resource type="ImageTexture" id=459]
 flags = 0
 flags = 0
-image = SubResource( 479 )
+image = SubResource( 487 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=460]
@@ -134,7 +134,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 459 )
 
-[sub_resource type="Image" id=480]
+[sub_resource type="Image" id=488]
 data = {
 "data": PoolByteArray( 246, 231, 213, 255, 156, 156, 156, 255, 107, 107, 107, 255, 57, 57, 57, 255 ),
 "format": "RGBA8",
@@ -146,7 +146,7 @@ data = {
 [sub_resource type="ImageTexture" id=406]
 flags = 0
 flags = 0
-image = SubResource( 480 )
+image = SubResource( 488 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=96]
@@ -157,7 +157,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 406 )
 
-[sub_resource type="Image" id=481]
+[sub_resource type="Image" id=489]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -169,7 +169,7 @@ data = {
 [sub_resource type="ImageTexture" id=463]
 flags = 0
 flags = 0
-image = SubResource( 481 )
+image = SubResource( 489 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=464]
@@ -180,7 +180,7 @@ shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 463 )
 
-[sub_resource type="Image" id=482]
+[sub_resource type="Image" id=490]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 252, 252, 252, 255, 60, 188, 252, 255, 0, 112, 236, 255 ),
 "format": "RGBA8",
@@ -192,7 +192,7 @@ data = {
 [sub_resource type="ImageTexture" id=466]
 flags = 0
 flags = 0
-image = SubResource( 482 )
+image = SubResource( 490 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=467]
@@ -208,7 +208,7 @@ flags = 2
 atlas = ExtResource( 45 )
 region = Rect2( 0, 0, 160, 8 )
 
-[sub_resource type="Image" id=483]
+[sub_resource type="Image" id=491]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 117, 255, 0, 255, 8, 121, 38, 255, 0, 83, 48, 255 ),
 "format": "RGBA8",
@@ -220,7 +220,7 @@ data = {
 [sub_resource type="ImageTexture" id=440]
 flags = 0
 flags = 0
-image = SubResource( 483 )
+image = SubResource( 491 )
 size = Vector2( 4, 1 )
 
 [sub_resource type="ShaderMaterial" id=243]
@@ -230,6 +230,10 @@ shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
 shader_param/palette = SubResource( 440 )
+
+[sub_resource type="DynamicFont" id=484]
+size = 8
+font_data = ExtResource( 4 )
 
 [sub_resource type="Animation" id=475]
 length = 0.001
@@ -403,7 +407,7 @@ tracks/2/keys = {
 } ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("CanvasLayer2/survive_label:visible")
+tracks/3/path = NodePath("CanvasLayer2/VBoxContainer/survive_label:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -1118,40 +1122,6 @@ index = 1
 
 [node name="display_text" parent="CanvasLayer2/lose_label" instance=ExtResource( 46 )]
 
-[node name="survive_label" type="Label" parent="CanvasLayer2"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -84.0
-margin_right = 84.0
-margin_bottom = 24.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 1
-custom_constants/line_spacing = 1
-custom_constants/shadow_offset_y = 1
-custom_fonts/font = SubResource( 67 )
-text = "TIEMPO SOBREVIVIDO:%d"
-align = 1
-valign = 1
-script = ExtResource( 24 )
-
-[node name="display_text" parent="CanvasLayer2/survive_label" instance=ExtResource( 46 )]
-
-[node name="dead_enemies" type="Label" parent="CanvasLayer2/survive_label"]
-margin_left = -1.0
-margin_top = 15.0
-margin_right = 175.0
-margin_bottom = 32.0
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/shadow_offset_x = 1
-custom_constants/line_spacing = 1
-custom_constants/shadow_offset_y = 1
-custom_fonts/font = SubResource( 67 )
-text = "MUERTES:00"
-align = 1
-valign = 1
-script = ExtResource( 36 )
-format = "MUERTES: %d"
-
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer2"]
 margin_left = 464.0
 margin_top = 4.0
@@ -1251,6 +1221,63 @@ modulate = Color( 0, 0, 0, 1 )
 show_behind_parent = true
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -84.0
+margin_right = 84.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( -208, 109 )
+
+[node name="survive_label" type="Label" parent="CanvasLayer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 168.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 67 )
+text = "TIEMPO SOBREVIVIDO:%d"
+align = 1
+valign = 1
+script = ExtResource( 24 )
+
+[node name="survive_display_text" parent="CanvasLayer2/VBoxContainer/survive_label" instance=ExtResource( 46 )]
+unique_name_in_owner = true
+
+[node name="dead_enemies" type="Label" parent="CanvasLayer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 11.0
+margin_right = 168.0
+margin_bottom = 18.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 67 )
+text = "MUERTES:00"
+align = 1
+valign = 1
+script = ExtResource( 36 )
+format = "MUERTES:%d"
+
+[node name="score" type="Label" parent="CanvasLayer2/VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 22.0
+margin_right = 168.0
+margin_bottom = 29.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/line_spacing = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 484 )
+text = "SCORE:0"
+align = 1
+valign = 1
+script = ExtResource( 36 )
+format = "SCORE:%d"
 
 [node name="spawn_odds_change_animation" type="AnimationPlayer" parent="."]
 playback_process_mode = 0
@@ -1400,8 +1427,9 @@ script = ExtResource( 53 )
 [node name="shield" type="Node" parent="global_drop_chance"]
 script = ExtResource( 53 )
 
-[connection signal="dead_enemies_changed" from="." to="CanvasLayer2/survive_label/dead_enemies" method="update_text"]
+[connection signal="dead_enemies_changed" from="." to="CanvasLayer2/VBoxContainer/dead_enemies" method="update_text"]
 [connection signal="dead_enemies_changed" from="." to="achievement_tracker" method="_on_dead_enemies_changed"]
+[connection signal="score_changed" from="." to="CanvasLayer2/VBoxContainer/score" method="update_text"]
 [connection signal="spawned_enemies_changed" from="." to="CanvasLayer2/spawned_enemies" method="update_text"]
 [connection signal="win" from="." to="achievement_tracker" method="_on_win"]
 [connection signal="spawn" from="spawner" to="." method="_on_spawner_spawn"]

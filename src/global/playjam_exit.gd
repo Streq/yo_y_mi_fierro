@@ -13,4 +13,4 @@ func restart():
 	yield(get_tree().create_timer(1.0),"timeout")
 	GlobalPalette.reload()
 	restart_rect.visible = false
-	get_tree().change_scene("res://src/map/arcade_mode.tscn")
+	get_tree().change_scene("res://src/main.tscn")

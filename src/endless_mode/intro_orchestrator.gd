@@ -10,13 +10,13 @@ onready var intro_label: Label = $"../CanvasLayer2/intro/intro_label"
 onready var consigna_label: Label = $"../CanvasLayer2/intro/consigna_label"
 onready var win_label: Label = $"../CanvasLayer2/win_label"
 onready var lose_label: Label = $"../CanvasLayer2/lose_label"
-onready var survive_label: Label = $"../CanvasLayer2/survive_label"
+onready var survive_label: Label = $"%survive_label"
+onready var survive_display_text: Node = $"%survive_display_text"
 
 onready var intro_display_text: Node = $"../CanvasLayer2/intro/intro_label/display_text"
 onready var consigna_display_text: Node = $"../CanvasLayer2/intro/consigna_label/display_text"
 onready var win_display_text: Node = $"../CanvasLayer2/win_label/display_text"
 onready var lose_display_text: Node = $"../CanvasLayer2/lose_label/display_text"
-onready var survive_display_text: Node = $"../CanvasLayer2/survive_label/display_text"
 
 onready var fade_out: Node = $"../fade_out"
 

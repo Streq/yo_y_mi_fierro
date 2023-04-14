@@ -1,22 +1,21 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://assets/theme/default.tres" type="Theme" id=1]
 [ext_resource path="res://src/menu/PauseMenu/PauseMenu.gd" type="Script" id=2]
-[ext_resource path="res://src/menu/PauseMenu/restart_game.gd" type="Script" id=3]
-[ext_resource path="res://src/menu/PauseMenu/resume.gd" type="Script" id=4]
+[ext_resource path="res://src/menu/MainMenu/endless_mode.gd" type="Script" id=3]
+[ext_resource path="res://src/menu/MainMenu/story_mode.gd" type="Script" id=4]
 [ext_resource path="res://src/menu/PauseMenu/view_achievements.gd" type="Script" id=5]
 [ext_resource path="res://src/menu/PauseMenu/set_locale.gd" type="Script" id=6]
 [ext_resource path="res://src/menu/MenuState.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/menu/locale_menu_entry.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/menu/PauseMenu/toggle_fullscreen.gd" type="Script" id=9]
-[ext_resource path="res://src/menu/PauseMenu/skip_intro.gd" type="Script" id=10]
+[ext_resource path="res://src/menu/MainMenu/show_on_game_beat.gd" type="Script" id=10]
 [ext_resource path="res://src/menu/PauseMenu/mute_music.gd" type="Script" id=11]
 [ext_resource path="res://src/menu/PauseMenu/mute_sfx.gd" type="Script" id=12]
-[ext_resource path="res://src/menu/PauseMenu/trigger_by_enter.gd" type="Script" id=13]
 
 [sub_resource type="Theme" id=2]
 
-[node name="PauseMenu" instance=ExtResource( 7 )]
+[node name="MainMenu" instance=ExtResource( 7 )]
 layer = 100
 script = ExtResource( 2 )
 
@@ -37,12 +36,12 @@ theme = ExtResource( 1 )
 margin_left = 1.0
 margin_top = 1.0
 margin_right = 185.0
-margin_bottom = 145.0
+margin_bottom = 133.0
 custom_constants/margin_bottom = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" index="0"]
 margin_right = 184.0
-margin_bottom = 128.0
+margin_bottom = 116.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource( 2 )
@@ -53,18 +52,18 @@ margin_right = 184.0
 margin_bottom = 32.0
 rect_min_size = Vector2( 0, 32 )
 theme = ExtResource( 1 )
-text = "Pause"
+text = "RECONTRA"
 align = 1
 valign = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" index="1"]
 margin_top = 36.0
 margin_right = 184.0
-margin_bottom = 128.0
+margin_bottom = 116.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
 margin_right = 184.0
-margin_bottom = 92.0
+margin_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -73,53 +72,57 @@ alignment = 1
 [node name="options" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" index="0"]
 unique_name_in_owner = true
 margin_right = 184.0
-margin_bottom = 92.0
+margin_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="resume" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="0" instance=ExtResource( 8 )]
+[node name="story_mode" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="0" instance=ExtResource( 8 )]
 margin_right = 184.0
-text = "Resume"
+text = "Story Mode"
 
-[node name="resume" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/resume" index="1"]
+[node name="story_mode" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/story_mode" index="1"]
 script = ExtResource( 4 )
 
-[node name="view_achievements" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="1" instance=ExtResource( 8 )]
+[node name="endless_mode" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="1" instance=ExtResource( 8 )]
+modulate = Color( 1, 0.835294, 0.521569, 1 )
 margin_top = 12.0
 margin_right = 184.0
 margin_bottom = 20.0
+text = "ENDLESS MODE"
+
+[node name="endless_mode" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/endless_mode" index="1"]
+script = ExtResource( 3 )
+
+[node name="show_on_game_beat" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/endless_mode" index="2"]
+script = ExtResource( 10 )
+
+[node name="view_achievements" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="2" instance=ExtResource( 8 )]
+margin_top = 24.0
+margin_right = 184.0
+margin_bottom = 32.0
 text = "View Achievements"
 
 [node name="view_achievements" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/view_achievements" index="1"]
 script = ExtResource( 5 )
 
-[node name="change_language" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="2" instance=ExtResource( 8 )]
-margin_top = 24.0
+[node name="change_language" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="3" instance=ExtResource( 8 )]
+margin_top = 36.0
 margin_right = 184.0
-margin_bottom = 32.0
+margin_bottom = 44.0
 text = "Change Language"
 
 [node name="set_locale" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/change_language" index="0"]
 script = ExtResource( 6 )
 
-[node name="Toggle Fullscreen" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="3" instance=ExtResource( 8 )]
-margin_top = 36.0
+[node name="Toggle Fullscreen" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="4" instance=ExtResource( 8 )]
+margin_top = 48.0
 margin_right = 184.0
-margin_bottom = 44.0
+margin_bottom = 56.0
 text = "Full Screen"
 
 [node name="toggle_fullscreen" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/Toggle Fullscreen" index="0"]
 script = ExtResource( 9 )
-
-[node name="skip_intro" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="4" instance=ExtResource( 8 )]
-margin_top = 48.0
-margin_right = 184.0
-margin_bottom = 56.0
-text = "Skip Intro"
-
-[node name="skip_intro" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/skip_intro" index="1"]
-script = ExtResource( 10 )
 
 [node name="mute_music" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="5" instance=ExtResource( 8 )]
 margin_top = 60.0
@@ -139,14 +142,4 @@ text = "Mute Sounds"
 [node name="mute_sfx" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/mute_sfx" index="1"]
 script = ExtResource( 12 )
 
-[node name="restart_game" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" index="7" instance=ExtResource( 8 )]
-margin_top = 84.0
-margin_right = 184.0
-margin_bottom = 92.0
-text = "Restart Game"
-
-[node name="restart_game" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/restart_game" index="1"]
-script = ExtResource( 3 )
-
-[node name="trigger_by_enter" type="Node" parent="." index="1"]
-script = ExtResource( 13 )
+[connection signal="enter" from="." to="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/endless_mode/show_on_game_beat" method="update"]

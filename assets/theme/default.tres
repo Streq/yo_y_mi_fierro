@@ -37,6 +37,7 @@ Label/constants/line_spacing = 0
 Label/constants/shadow_offset_x = 1
 Label/constants/shadow_offset_y = 1
 Label/fonts/font = ExtResource( 2 )
+Panel/styles/panel = SubResource( 6 )
 PanelContainer/styles/panel = SubResource( 6 )
 VScrollBar/styles/grabber = SubResource( 1 )
 VScrollBar/styles/grabber_highlight = SubResource( 2 )

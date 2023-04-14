@@ -72,7 +72,7 @@ Delete Progress (hold pressed for 2 seconds),Delete Progress (hold pressed for 2
 Resume,Resume,Volver,Volver
 View Achievements,View Achievements,Ver Logros,Ver Logros
 Change Language,Change Language,Cambiar Idioma,Cambiar Idioma
-Restart Game,Restart Game,Reiniciar Juego,Reiniciar Juego
+Restart Game,Exit To Main Menu,Salir Al Menu,Salir Al Menu
 Pause,Pause,Pausa,Pausa
 PAUSE,PAUSE,PAUSA,PAUSA
 Full Screen,Full Screen,Pantalla Completa,Pantalla Completa
@@ -85,3 +85,8 @@ Sync Achievements With Web,Sync Web Achievements,Sincronizar Logros Web,Sincroni
 Done,Done,Listo,Listo
 Try a different gun?,Choose your Gun,Elegí tu Fierro,Elegí tu Fierro
 SE HIZO LO QUE SE PUDO,YOU DID WHAT YOU COULD,SE HIZO LO QUE SE PUDO,SE HIZO LO QUE SE PUDO
+Story Mode,Story Mode,Modo Historia,Modo Historia
+ENDLESS MODE,ENDLESS MODE,MODO INFINITO,MODO INFINITO
+ENDLESS MODE HIGHSCORE:%d,ENDLESS MODE HIGHSCORE:%d,HIGHSCORE MODO INFINITO:%d,HIGHSCORE MODO INFINITO:%d
+ENDLESS MODE UNLOCKED,ENDLESS MODE UNLOCKED,MODO INFINITO DESBLOQUEADO,MODO INFINITO DESBLOQUEADO
+TIEMPO SOBREVIVIDO:%d,TIME SURVIVED:%d,TIEMPO SOBREVIVIDO:%d,TIEMPO SOBREVIVIDO:%d

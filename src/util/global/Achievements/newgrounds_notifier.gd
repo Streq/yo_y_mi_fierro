@@ -5,6 +5,7 @@ onready var list: Node = $"%list"
 export var id_map = {}
 
 export var highscore_id : int
+export var endless_highscore_id : int
 
 func _ready() -> void:
 	for child in list.get_children():
@@ -20,3 +21,6 @@ func completed(achievement_name):
 
 func highscore(score):
 	NGIO.request("ScoreBoard.postScore",{"id": highscore_id, "value": score})
+
+func highscore_endless(score) -> void:
+	NGIO.request("ScoreBoard.postScore",{"id": endless_highscore_id, "value": score})

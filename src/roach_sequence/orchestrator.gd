@@ -197,7 +197,6 @@ func _ready() -> void:
 	roach.get_node("%death_free_anim").play()
 	stage_clear_music.play()
 	Text.say("GANASTE!!!!!")
-	
 	Achievements.complete("beat_boss")
 	if !player_hurt:
 		Achievements.complete("no_hurt_boss")

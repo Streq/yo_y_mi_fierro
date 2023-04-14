@@ -15,7 +15,7 @@ var map = {}
 
 var highscore : int = 0
 var highscore_endless : int = 0
-
+var unlocked_endless := false
 onready var list: Node = $"%list"
 
 func _ready() -> void:
@@ -65,3 +65,6 @@ func submit_highscore_endless(score):
 	emit_signal("highscore_endless_updated")
 	emit_signal("changed")
 
+func unlock_endless():
+	unlocked_endless = true
+	emit_signal("changed")

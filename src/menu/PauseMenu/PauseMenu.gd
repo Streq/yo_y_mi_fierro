@@ -26,11 +26,4 @@ func enter():
 func exit():
 	hide()
 	emit_signal("exit")
-	
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
-		if MenuStack.empty():
-			MenuStack.push(self)
-		elif MenuStack.current() == self:
-			MenuStack.pop()
-		
+

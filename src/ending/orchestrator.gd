@@ -11,8 +11,13 @@ func _ready() -> void:
 	yield(Text,"finished")
 	
 	Text.say("FIN",2.0,"narrator")
-	
 	yield(Text,"finished")
+	
+	if !Achievements.unlocked_endless:
+		Achievements.unlock_endless()
+		Text.say("ENDLESS MODE UNLOCKED",2.0,"narrator")
+		yield(Text,"finished")
+	
 	credits.display()
 	yield(credits,"finished")
 	music.stop()

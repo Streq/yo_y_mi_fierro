@@ -7,4 +7,5 @@ func _ready() -> void:
 	if !Global.language_chosen:
 		MenuStack.push(LocaleMenu)
 		yield(MenuStack,"empty")
-	get_tree().change_scene("res://src/map/arcade_mode.tscn")
+	MenuStack.push(MainMenu)
+	

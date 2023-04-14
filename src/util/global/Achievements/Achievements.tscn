@@ -103,8 +103,10 @@ id_map = {
 "starting_gun": 73372
 }
 highscore_id = 12719
+endless_highscore_id = 12726
 
 [connection signal="changed" from="." to="storage" method="save_to_file"]
 [connection signal="complete" from="." to="newgrounds_notifier" method="completed"]
 [connection signal="highscore" from="." to="newgrounds_notifier" method="highscore"]
+[connection signal="highscore_endless" from="." to="newgrounds_notifier" method="highscore_endless"]
 [connection signal="ready" from="." to="storage" method="load_from_file"]

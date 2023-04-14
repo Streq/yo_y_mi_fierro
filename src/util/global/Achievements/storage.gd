@@ -33,6 +33,8 @@ func load_from_file():
 			if !val:
 				val = Achievements.map["beat_boss"].completed
 			owner.set(UNLOCKED_ENDLESS, val)
+		else:
+			owner.set(UNLOCKED_ENDLESS, Achievements.map["beat_boss"].completed)
 	save_game.close()
 
 func clear():

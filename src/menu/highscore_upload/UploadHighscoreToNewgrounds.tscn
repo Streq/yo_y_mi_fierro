@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/theme/default.tres" type="Theme" id=1]
+[ext_resource path="res://src/menu/locale_menu_entry.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/menu/highscore_upload/continue.gd" type="Script" id=3]
+[ext_resource path="res://src/menu/highscore_upload/retry.gd" type="Script" id=4]
+[ext_resource path="res://src/menu/highscore_upload/UploadHighscoreToNewgrounds.gd" type="Script" id=5]
+
+[sub_resource type="Theme" id=1]
+
+[node name="UploadHighscoreToNewgrounds" type="CanvasLayer"]
+pause_mode = 2
+layer = 100
+script = ExtResource( 5 )
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -93.0
+margin_top = -49.0
+margin_right = 93.0
+margin_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+margin_left = 1.0
+margin_top = 1.0
+margin_right = 281.0
+margin_bottom = 97.0
+custom_constants/margin_right = 8
+custom_constants/margin_top = 0
+custom_constants/margin_left = 8
+custom_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+margin_left = 8.0
+margin_right = 272.0
+margin_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 1 )
+
+[node name="uploading" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 264.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+theme = ExtResource( 1 )
+text = "UPLOADING HIGHSCORE TO NEWGROUNDS"
+align = 1
+valign = 1
+
+[node name="failed" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+margin_top = 36.0
+margin_right = 184.0
+margin_bottom = 68.0
+rect_min_size = Vector2( 0, 32 )
+theme = ExtResource( 1 )
+text = "HIGHSCORE UPLOAD TO NEWGROUNDS FAILED"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+margin_top = 36.0
+margin_right = 264.0
+margin_bottom = 56.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
+margin_right = 264.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="options" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 264.0
+margin_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="retry" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" instance=ExtResource( 2 )]
+unique_name_in_owner = true
+margin_right = 264.0
+text = "Retry"
+
+[node name="retry" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/retry"]
+script = ExtResource( 4 )
+
+[node name="continue" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" instance=ExtResource( 2 )]
+margin_top = 12.0
+margin_right = 264.0
+margin_bottom = 20.0
+text = "Continue Without Uploading"
+
+[node name="continue" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/continue"]
+script = ExtResource( 3 )

@@ -266,6 +266,7 @@ script = ExtResource( 7 )
 wait_time = 2.0
 one_shot = true
 
+[connection signal="enter" from="." to="PanelContainer/VBoxContainer/options/HBoxContainer/sync/sync_achievements" method="synch"]
 [connection signal="trigger" from="PanelContainer/VBoxContainer/options/HBoxContainer/sync/sync_achievements" to="PanelContainer/VBoxContainer/options/HBoxContainer/title" method="show"]
 [connection signal="trigger" from="PanelContainer/VBoxContainer/options/HBoxContainer/sync/sync_achievements" to="PanelContainer/VBoxContainer/options/HBoxContainer/title/Timer" method="start"]
 [connection signal="timeout" from="PanelContainer/VBoxContainer/options/HBoxContainer/title/Timer" to="PanelContainer/VBoxContainer/options/HBoxContainer/title" method="hide"]

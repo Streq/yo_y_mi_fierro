@@ -49,6 +49,7 @@ func clear():
 	for achievement in map.values():
 		achievement.completed = false
 	highscore = 0
+	highscore_endless = 0
 	emit_signal("changed")
 	emit_signal("highscore_updated")
 	emit_signal("highscore_endless_updated")

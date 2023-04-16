@@ -65,21 +65,21 @@ var newgroundsio_request
 var session_id
 var gateway_uri = "https://newgrounds.io/gateway_v3.php"
 
+
+var queue = []
+
 func request(component, parameters, func_ref = null, on_load_function = null):
-	
-	if OS.has_feature('JavaScript'):
+	if true or OS.has_feature('JavaScript'):
 		newgroundsio_request = HTTPRequest.new()
 		add_child(newgroundsio_request)
-		if func_ref and not on_load_function:
-			newgroundsio_request.connect("request_completed", self, "_request_completed", [func_ref])
-		if func_ref and on_load_function:
-			newgroundsio_request.connect("request_completed", self, "_request_completed", [func_ref, on_load_function])
+		newgroundsio_request.connect("request_completed", self, "_request_completed", [newgroundsio_request, func_ref, on_load_function])
 		
 		var call_parameters = {
 			"component": component,
 			"parameters": parameters,
 		}
-		
+		print("calling NGIO:", call_parameters)
+	
 		var secure_encoding = str(JavaScript.eval(
 			"""
 				/*
@@ -133,7 +133,6 @@ func request(component, parameters, func_ref = null, on_load_function = null):
 				"secure": secure_encoding,
 			}
 		}
-		
 		newgroundsio_request.request(
 			gateway_uri,
 			["Content-Type: application/x-www-form-urlencoded"],
@@ -141,13 +140,27 @@ func request(component, parameters, func_ref = null, on_load_function = null):
 			HTTPClient.METHOD_POST,
 			"input=" + JSON.print(input_parameters).percent_encode()
 		)
+		return newgroundsio_request
 
-func _request_completed(result, response_code, headers, body, func_ref, on_load_function = null):
-	if on_load_function:
-		func_ref.call_func(parse_json(body.get_string_from_ascii()), on_load_function)
-	else:
-		func_ref.call_func(parse_json(body.get_string_from_ascii()))
-
+func _request_completed(
+	result, 
+	response_code, 
+	headers, 
+	body, 
+	http_request : HTTPRequest = null, 
+	func_ref : FuncRef = null, 
+	on_load_function = null
+):
+	print("result:",result)
+	print("response_code:",result)
+	print("headers:",headers)
+	print("body:",body.get_string_from_ascii())
+	if func_ref:
+		if on_load_function:
+			func_ref.call_func(parse_json(body.get_string_from_ascii()), on_load_function)
+		else:
+			func_ref.call_func(parse_json(body.get_string_from_ascii()))
+	http_request.queue_free()
 
 func cloud_save(data:Dictionary, slot:int = 1, func_ref:FuncRef = funcref(self, "_show_cloud_save_results")):
 	var stringified_data = to_json(data)

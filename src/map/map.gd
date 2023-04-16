@@ -45,10 +45,12 @@ func win():
 	spawner_timer.paused = true
 	get_tree().call_group_flags(SceneTree.GROUP_CALL_REALTIME,"enemy","die")
 	emit_signal("win")
-	Achievements.submit_highscore(score)
+	var final_score = score
 	yield(win_display_text, "finished")
 	fade_out_win_anim.play("play")
 	yield(fade_out_win_anim,"animation_finished")
+	Achievements.submit_highscore(final_score)
+	yield(get_tree().create_timer(0.5, false),"timeout")
 	get_tree().change_scene("res://src/wife_sequence/wife_scene.tscn")
 #	Exit.win()
 	pass

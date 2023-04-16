@@ -12,7 +12,6 @@ func _ready() -> void:
 		if !id_map.has(child.name):
 			id_map[child.name] = 0
 
-
 func completed(achievement_name):
 	if !id_map.has(achievement_name):
 		return
@@ -20,7 +19,8 @@ func completed(achievement_name):
 	NGIO.request("Medal.unlock", {"id": achievement_id})
 
 func highscore(score):
-	NGIO.request("ScoreBoard.postScore",{"id": highscore_id, "value": score})
+	UploadHighscoreToNewgrounds.upload_highscore({"id": highscore_id, "value": score})
 
 func highscore_endless(score) -> void:
-	NGIO.request("ScoreBoard.postScore",{"id": endless_highscore_id, "value": score})
+	UploadHighscoreToNewgrounds.upload_highscore({"id": endless_highscore_id, "value": score})
+

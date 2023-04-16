@@ -24,8 +24,9 @@ func lose():
 	if is_instance_valid(consigna_label):
 		consigna_label.visible = false
 	lose_anim.play("play")
-	Achievements.submit_highscore_endless(score)
+	var final_score = score
 	yield(lose_anim,"animation_finished")
+	Achievements.submit_highscore_endless(final_score)
 	Exit.lose()
 	pass
 	

@@ -166,7 +166,7 @@ Exit="*res://src/global/Exit.tscn"
 Pause="*res://src/global/pause.tscn"
 Text="*res://src/global/HUD/Text.tscn"
 Achievements="*res://src/util/global/Achievements/Achievements.tscn"
-NGIO="*res://src/util/global/newgrounds.io/NGIO.gd"
+NGIO="*res://src/util/global/newgrounds.io/NGIO.tscn"
 AchievementNotification="*res://src/HUD/AchievementNotification/AchievementNotification.tscn"
 FPS="*res://src/util/global/FPS/FPS.tscn"
 MenuStack="*res://src/menu/Menu.tscn"
@@ -175,6 +175,7 @@ PauseMenu="*res://src/menu/PauseMenu/PauseMenu.tscn"
 AchievementsMenu="*res://src/menu/AchievementsMenu/AchievementsMenu.tscn"
 ChooseGunMenu="*res://src/roach_sequence/choose_gun.tscn"
 MainMenu="*res://src/menu/MainMenu/MainMenu.tscn"
+UploadHighscoreToNewgrounds="*res://src/menu/highscore_upload/UploadHighscoreToNewgrounds.tscn"
 
 [display]
 

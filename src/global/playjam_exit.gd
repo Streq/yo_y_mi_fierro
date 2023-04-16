@@ -10,7 +10,7 @@ func lose():
 
 func restart():
 	restart_rect.visible = true
-	yield(get_tree().create_timer(1.0),"timeout")
+	yield(get_tree().create_timer(1.0, false),"timeout")
 	GlobalPalette.reload()
 	restart_rect.visible = false
 	get_tree().change_scene("res://src/main.tscn")

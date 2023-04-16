@@ -69,7 +69,7 @@ var gateway_uri = "https://newgrounds.io/gateway_v3.php"
 var queue = []
 
 func request(component, parameters, func_ref = null, on_load_function = null):
-	if OS.has_feature('JavaScript'):
+	if OS.has_feature('JavaScript') and OS.has_feature("newgrounds"):
 		newgroundsio_request = HTTPRequest.new()
 		add_child(newgroundsio_request)
 		newgroundsio_request.connect("request_completed", self, "_request_completed", [newgroundsio_request, func_ref, on_load_function])

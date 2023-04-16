@@ -20,7 +20,8 @@ func upload_highscore(request_body):
 			request_body
 		)
 		if !request:
-			break
+			MenuStack.pop()
+			return
 		uploading()
 		var res = yield(request, "request_completed")
 		var body_bytes : PoolByteArray = res[-1]

@@ -57,23 +57,33 @@ valign = 1
 [node name="failed" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
-margin_top = 36.0
-margin_right = 184.0
-margin_bottom = 68.0
+margin_right = 296.0
+margin_bottom = 32.0
 rect_min_size = Vector2( 0, 32 )
 theme = ExtResource( 1 )
 text = "HIGHSCORE UPLOAD TO NEWGROUNDS FAILED"
 align = 1
 valign = 1
 
+[node name="success" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+margin_right = 256.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 0, 32 )
+theme = ExtResource( 1 )
+text = "HIGHSCORE SUBMITTED SUCCESSFULLY"
+align = 1
+valign = 1
+
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
 margin_top = 36.0
 margin_right = 264.0
-margin_bottom = 56.0
+margin_bottom = 44.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer"]
 margin_right = 264.0
-margin_bottom = 20.0
+margin_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
@@ -82,7 +92,7 @@ alignment = 1
 [node name="options" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 margin_right = 264.0
-margin_bottom = 20.0
+margin_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
@@ -95,11 +105,13 @@ text = "Retry"
 [node name="retry" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/retry"]
 script = ExtResource( 4 )
 
-[node name="continue" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" instance=ExtResource( 2 )]
+[node name="skip" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options" instance=ExtResource( 2 )]
+unique_name_in_owner = true
+visible = false
 margin_top = 12.0
 margin_right = 264.0
 margin_bottom = 20.0
 text = "Continue Without Uploading"
 
-[node name="continue" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/continue"]
+[node name="continue" type="Node" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/options/skip"]
 script = ExtResource( 3 )

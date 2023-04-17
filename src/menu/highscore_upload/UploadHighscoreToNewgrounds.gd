@@ -7,11 +7,16 @@ onready var menu_stack = owner
 onready var options: VBoxContainer = $"%options"
 onready var uploading: Label = $"%uploading"
 onready var failed: Label = $"%failed"
+onready var success: Label = $"%success"
 onready var retry: CenterContainer = $"%retry"
+onready var skip: CenterContainer = $"%skip"
 
 var should_give_up = false
 
 func upload_highscore(request_body):
+	silent_upload(request_body)
+
+func loud_upload(request_body):
 	MenuStack.push(self)
 	should_give_up = false
 	while !should_give_up:
@@ -27,7 +32,7 @@ func upload_highscore(request_body):
 		var body_bytes : PoolByteArray = res[-1]
 		var body = JSON.parse(body_bytes.get_string_from_ascii()).result
 		if body.success:
-			MenuStack.pop()
+			success()
 			return
 		elif should_give_up:
 			return
@@ -36,6 +41,13 @@ func upload_highscore(request_body):
 			var retry = yield(self, "retry")
 			if !retry:
 				return
+
+func silent_upload(request_body):
+	var request : HTTPRequest = NGIO.request(
+		"ScoreBoard.postScore",
+		request_body
+	)
+	
 
 func _ready() -> void:
 	exit()
@@ -59,6 +71,7 @@ func refocus():
 	back.focus_neighbour_bottom = front.get_path()
 	front.focus_neighbour_top = back.get_path()
 
+
 func exit():
 	hide()
 	emit_signal("exit")
@@ -66,11 +79,31 @@ func exit():
 func uploading():
 	failed.hide()
 	uploading.show()
+	success.hide()
+
 	retry.hide()
+	skip.show()
+
 	refocus()
 
 func failed():
 	failed.show()
 	uploading.hide()
+	success.hide()
+
 	retry.show()
+	skip.show()
+	
 	refocus()
+
+func success():
+	failed.hide()
+	uploading.hide()
+	success.show()
+	
+	retry.hide()
+	skip.hide()
+	
+	yield(get_tree().create_timer(1.5),"timeout")
+	MenuStack.pop()
+	

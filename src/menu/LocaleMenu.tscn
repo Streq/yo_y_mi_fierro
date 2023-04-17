@@ -58,7 +58,7 @@ func _input(event: InputEvent) -> void:
 		MenuStack.pop()
 "
 
-[sub_resource type="Image" id=465]
+[sub_resource type="Image" id=511]
 data = {
 "data": PoolByteArray( 255, 255, 255, 0, 255, 227, 99, 255, 255, 57, 8, 255, 0, 0, 0, 255 ),
 "format": "RGBA8",
@@ -67,19 +67,19 @@ data = {
 "width": 4
 }
 
-[sub_resource type="ImageTexture" id=463]
+[sub_resource type="ImageTexture" id=509]
 flags = 0
 flags = 0
-image = SubResource( 465 )
+image = SubResource( 511 )
 size = Vector2( 4, 1 )
 
-[sub_resource type="ShaderMaterial" id=464]
+[sub_resource type="ShaderMaterial" id=510]
 resource_local_to_scene = true
 shader = ExtResource( 5 )
 shader_param/palette_size = 4
 shader_param/offset = 0
 shader_param/blue_index_offset = 0.0
-shader_param/palette = SubResource( 463 )
+shader_param/palette = SubResource( 509 )
 
 [sub_resource type="GDScript" id=10]
 script/source = "extends Node
@@ -123,7 +123,7 @@ layer = 127
 script = SubResource( 2 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
-material = SubResource( 464 )
+material = SubResource( 510 )
 margin_left = 399.0
 margin_top = 152.0
 margin_right = 399.0
